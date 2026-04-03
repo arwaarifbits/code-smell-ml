@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="layout/adminBase::head('Home')"></head>
+
+<body>
+
+  <header th:replace="layout/adminBase::header('Spring Academic')"></header>
+
+  <div class="container-fluid my-4">
+    <div class="row">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header">Shortcuts</div>
+          <div class="card-body">
+            <h5 class="card-title"><b>Students</b></h5>
+            <a href="#" class="btn btn-raised btn-success">Create</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header">Shortcuts</div>
+          <div class="card-body">
+            <h5 class="card-title"><b>Teachers</b></h5>
+            <a href="#" class="btn btn-raised btn-success">Create</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+      <div class="col-6">
+        <canvas id="chartCursos" width="400" height="230"></canvas>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header">Teachers</div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead>
+                <tr class="table-success">
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Course</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Lorem</td>
+                  <td>Ipsum</td>
+                  <td>Dolor</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Lorem</td>
+                  <td>Ipsum</td>
+                  <td>Dolor</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Lorem</td>
+                  <td>Ipsum</td>
+                  <td>Dolor</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Lorem</td>
+                  <td>Ipsum</td>
+                  <td>Dolor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 30px">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header">Students</div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead>
+                <tr class="table-primary">
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Lorem</td>
+                  <td>Ipsum</td>
+                  <td>Dolor</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Lorem</td>
+                  <td>Ipsum</td>
+                  <td>Dolor</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Lorem</td>
+                  <td>Ipsum</td>
+                  <td>Dolor</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Lorem</td>
+                  <td>Ipsum</td>
+                  <td>Dolor</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <canvas id="chartAlumnos" width="400" height="230"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <footer th:replace="layout/adminBase::footer()"></footer>
+  <script src="js/admin/home.js"></script>
+</body>
+
+</html>

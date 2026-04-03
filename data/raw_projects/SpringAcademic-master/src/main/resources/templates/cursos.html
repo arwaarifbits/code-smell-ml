@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="layout/adminBase::head('Cursos')"></head>
+
+<body>
+  <header th:replace="layout/adminBase::header('Mantenimiento de Cursos')"></header>
+  <div class="container-fluid" style="margin-top: 20px;">
+    <div class="row">
+      <div class="col-12">
+        <div class="card border-success">
+          <div class="card-header">Cursos Actuales</div>
+          <div class="card-body">
+            <nav class="nav" style="margin-bottom: 20px;">
+              <a class="nav-link btn btn-raised btn-success" style="margin-right: 10px;" role="button" href="#"
+                id="btnNuevoCurso">Nuevo Curso</a>
+            </nav>
+            <table id="tbCursos" class="table table-striped">
+              <thead>
+                <tr class="table-success">
+                  <th scope="col">Id</th>
+                  <th scope="col">Nivel</th>
+                  <th scope="col">Etapa</th>
+                  <th scope="col">Acción</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Nuevo Curso -->
+  <div class="modal fade" id="mdCrearCurso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mdcrear-title">Nuevo Curso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formCurso" action="#" th:action="@{/crearCurso}" th:object="${curso}" role="form" autocomplete="off"
+            method="post">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="spNivel">*Nivel</label>
+                  <input type="number" class="form-control" id="spNivel" th:field="*{nivel}" value="1" min="1" max="10"
+                    step="1" required />
+                  <input type="text" id="auxId" hidden>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="slEtapa">*Etapa</label>
+                  <select id="slEtapa" th:field="*{etapa}" class="custom-select">
+                    <option th:value="PRIMARIA">PRIMARIA</option>
+                    <option th:value="SECUNDARIA">SECUNDARIA</option>
+                    <option th:value="BACHILLERATO">BACHILLERATO</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button type="reset" class="btn btn-primary">Limpiar</button>
+              <button type="submit" class="btn btn-success">Crear</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal success -->
+  <div th:if="${param.success}" class="modal fade" id="successModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content alert alert-success">
+        <div class="modal-header">
+          <h5 class="modal-title">Información<i class="fas fa-info-circle mx-3"></i></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="padding-bottom: 0">
+            El Curso se ha Registrado de Manera Exitosa!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal failed -->
+  <div th:if="${param.failed}" class="modal fade" id="failedModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content alert alert-danger">
+        <div class="modal-header">
+          <h5 class="modal-title">Información<i class="fas fa-info-circle mx-3"></i></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="padding-bottom: 0">
+            El Curso ya se Encuentra Registrado!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer th:replace="layout/adminBase::footer()"></footer>
+  <script src="js/admin/cursos.js"></script>
+</body>
+
+</html>

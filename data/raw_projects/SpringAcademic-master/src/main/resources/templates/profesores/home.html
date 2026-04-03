@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="layout/profesorBase::head('Home')"></head>
+
+<body>
+  <header th:replace="layout/profesorBase::header('Spring Academic')"></header>
+  <div class="container-fluid my-4">
+    <span id="spNombre" th:text="${profesor.nombre}" hidden></span>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">Inicio Rápido</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6">
+                <div class="timetable"></div>
+              </div>
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-header">Clases</div>
+                  <div class="card-body">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr class="table-light">
+                          <th scope="col">#</th>
+                          <th scope="col">Asignatura</th>
+                          <th scope="col">Curso</th>
+                          <th scope="col">Estudiantes</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr th:each="clase, iStat : ${clases}">
+                          <th scope="row" th:text="${iStat.count}"></th>
+                          <td th:text="${clase.asignatura.nombre}"></td>
+                          <td th:text="${clase.asignatura.curso.nivel + ' - ' + clase.asignatura.curso.etapa}"></td>
+                          <td th:text="${#sets.size(clase.asignatura.curso.alumnos)}"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer th:replace="layout/profesorBase::footer()"></footer>
+  <script src="js/profesor/home.js"></script>
+</body>
+
+</html>

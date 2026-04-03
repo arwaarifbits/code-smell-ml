@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head th:replace="layout/adminBase::head('Busqueda de Alumnos')"></head>
+
+<body>
+  <header th:replace="layout/adminBase::header('Alumnado')"></header>
+  <div class="container-fluid" style="margin-top: 20px;">
+    <div class="row">
+      <div class="col-6">
+        <div class="card border-success">
+          <div class="card-header">Búsqueda de Alumnos</div>
+          <div class="card-body" style="padding-bottom: 0">
+            <form id="searchForm" class="form">
+              <div class="row">
+                <div class="col-6" style="padding-right: 0">
+                  <div class="form-group">
+                    <i class="fas fa-user-edit fa-lg" style="margin-right: 20px;"></i>
+                    <label for="searchName">Nombre</label>
+                    <input id="searchName" class="form-control form-control-sm mr-3 w-75" type="text"
+                      placeholder="Nombre del Alumno..." aria-label="Search" style="height: 40px; margin-top: 10px;">
+                  </div>
+                </div>
+                <div class="col-6" style="padding-left: 0">
+                  <div class="form-group">
+                    <i class="fas fa-address-book fa-lg" style="margin-right: 25px;"></i>
+                    <label for="searchCurso">Curso</label>
+                    <select id="slCursos" class="custom-select" style="margin-top: 10px;"></select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group my-3" style="margin-bottom: 0!important; margin-left: 15px;">
+                  <button type="button" id="btnBuscar" class="btn btn-raised btn-success">Buscar</button>
+                  <button type="reset" class="btn btn-raised btn-primary mx-4">Limpiar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card border-success">
+          <div class="card-header">Filtros</div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-6">
+                <span>Por Asignatura</span>
+                <select id="slAsignaturas" class="custom-select" style="margin-top: 10px;"></select>
+                <div class="custom-control custom-checkbox my-4">
+                  <input type="checkbox" class="custom-control-input" id="cbFiltro">
+                  <label class="custom-control-label" for="cbFiltro">Mostrar Solo Actuales</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row my-4">
+      <div class="col-12">
+        <div class="card border-success">
+          <div class="card-header">Resultados de Búsqueda</div>
+          <div class="card-body">
+            <nav class="nav" style="margin-bottom: 20px;">
+              <a id="btnNuevoAlumno" class="nav-link btn btn-raised btn-success" style="margin-right: 10px;"
+                role="button" href="#">Nuevo Alumno</a>
+            </nav>
+            <table id="tbBusqueda" class="table table-striped">
+              <thead>
+                <tr class="table-light">
+                  <th scope="col">Id</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Curso</th>
+                  <th scope="col">Responsable</th>
+                  <th scope="col">Fecha Alta</th>
+                  <th scope="col">Fecha Baja</th>
+                  <th scope="col">Acción</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- modal success para profesor -->
+  <div th:if="${param.success}" class="modal fade" id="successModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content  alert alert-success">
+        <div class="modal-header">
+          <h5 class="modal-title">Información<i class="fas fa-info-circle mx-3"></i></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="padding-bottom: 0">
+            El Alumno se ha Registrado de Manera Exitosa!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- modal clases -->
+  <div class="modal fade" id="modalClases" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalClasesabel">Clases</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="timetable"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="mdCrearAlumno" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="mdcrear-title" class="modal-title">Nuevo Alumno</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="formAlumno" action="#" th:action="@{/crearAlumno}" th:object="${alumno}" role="form"
+            autocomplete="off" method="post">
+            <ul class="nav nav-tabs bg-light">
+              <li class="active nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#alumno">Alumno</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#responsable">Responsable</a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div id="alumno" class="tab-pane fade my-3 show active">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="itNombre">Nombre*</label>
+                      <input type="text" id="itNombre" th:field="*{nombre}" class="form-control"
+                        placeholder="Nombre del Alumno" required>
+                      <input type="text" id="auxId" hidden>
+                    </div>
+                    <div class="form-group">
+                      <label for="itApellido">Apellido*</label>
+                      <input type="text" id="itApellido" th:field="*{apellido}" class="form-control"
+                        placeholder="Apellido del Alumno" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="itNif">Nif</label>
+                      <input type="text" id="itNif" th:field="*{nif}" class="form-control" placeholder="Cédula">
+                    </div>
+                    <div class="form-group">
+                      <label for="itTelefono">Telefono</label>
+                      <input type="text" id="itTelefono" th:field="*{telefono}" class="form-control"
+                        placeholder="Telefono">
+                    </div>
+                    <div class="form-group">
+                      <label for="itCorreo">Correo</label>
+                      <input type="text" id="itCorreo" th:field="*{correo}" class="form-control" placeholder="Correo"
+                        data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="manual"
+                        data-content="Ingrese un correo válido">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="itCurso">Curso*</label>
+                      <select id="itCurso" th:field="*{nCurso}" class="custom-select"></select>
+                      <div class="custom-control custom-checkbox my-2">
+                        <input type="checkbox" th:field="*{repetidor}" class="custom-control-input" id="cbRepetidor">
+                        <label class="custom-control-label" for="cbRepetidor">Repetidor</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="itfalta">Fecha Alta</label>
+                      <input type="date" id="itfalta" th:field="*{fechaAlta}" class="form-control" placeholder="Correo"
+                        readonly>
+                    </div>
+                    <div class="form-group">
+                      <label for="itfbaja">Fecha Baja</label>
+                      <input type="date" id="itfbaja" class="form-control" placeholder="Correo" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label for="taObservaciones">Observaciones</label>
+                      <textarea class="form-control" id="taObservaciones" th:field="*{observaciones}" rows="3"
+                        style="overflow: auto; resize: none;"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="responsable" class="tab-pane fade my-3">
+                <small>Nota: Solo rellene esta información de ser necesario.</small>
+                <div class="form-group">
+                  <label for="itRespNombre">Nombre*</label>
+                  <input type="text" id="itRespNombre" th:field="*{responsable.nombre}" class="form-control"
+                    placeholder="Nombre del Responsable">
+                  <input type="text" id="auxIdResp" hidden>
+                </div>
+                <div class="form-group">
+                  <label for="itRespApellido">Apellido*</label>
+                  <input type="text" id="itRespApellido" th:field="*{responsable.apellido}" class="form-control"
+                    placeholder="Apellido del Alumno">
+                </div>
+                <div class="form-group">
+                  <label for="itRespNif">Nif*</label>
+                  <input type="text" id="itRespNif" th:field="*{responsable.nif}" class="form-control"
+                    placeholder="Cédula">
+                </div>
+                <div class="form-group">
+                  <label for="itRespTelefono">Telefono*</label>
+                  <input type="text" id="itRespTelefono" th:field="*{responsable.telefono}" class="form-control"
+                    placeholder="Telefono">
+                </div>
+                <div class="form-group">
+                  <label for="itRespCorreo">Correo*</label>
+                  <input type="text" id="itRespCorreo" th:field="*{responsable.correo}" class="form-control"
+                    placeholder="Correo" data-container="body" data-toggle="popover" data-placement="right"
+                    data-trigger="manual" data-content="Ingrese un correo válido">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer" style="padding-bottom: 0">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+              <button id="btnCrear" type="submit" class="btn btn-success">Crear</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer th:replace="layout/adminBase::footer()"></footer>
+  <script src="js/admin/alumnado.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.selected {
+  background-color: rgb(148, 203, 84);
+  color: white;
+}
+
+.occuped {
+  background-color: rgb(204, 56, 26);
+  color: white;
+}
+
+#tbHorario tbody td:hover {
+  background-color: rgb(251, 191, 57);
+}

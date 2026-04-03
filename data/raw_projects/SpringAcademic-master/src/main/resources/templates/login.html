@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login SpringAcademic</title>
+
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+	<link rel="stylesheet"
+		href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+		integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+		integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+	</script>
+	<script src="https://kit.fontawesome.com/f03089975e.js"></script>
+
+	<!-- p5.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12" style="padding: 0">
+				<div id="waves"></div>
+				<div class="card" style="margin-top: 50px; width: 500px; margin-left: auto; margin-right: auto;">
+					<div class="card-body">
+						<div class="card-body">
+							<h5 class="card-title">
+								<i class="fab fa-earlybirds fa-2x" style="margin-right: 10px;"></i>
+								<b>Log In</b>
+							</h5>
+							<form th:action="@{/login}" method="post">
+								<div th:if="${param.logout}" class="alert alert-warning" role="alert">
+									<strong>You have left your account!</strong> Log in again
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+
+								<div th:if="${param.error}" class="alert alert-danger" role="alert">
+									<strong>Something went wrong!</strong> Check your credentials
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+
+								<div id="alertUsuario" class="alert alert-danger" role="alert" style="display: none;">
+									<strong>Hey!</strong> Enter a Valid Username!
+								</div>
+
+								<div id="alertCorreo" class="alert alert-success" role="alert" style="display: none;">
+									<strong>Check your email!</strong> We have sent useful information
+								</div>
+
+								<div id="alertToken" class="alert alert-warning" role="alert" style="display: none;">
+									<strong>Easy there!</strong> We have already sent information to your email!
+								</div>
+								<hr>
+								<div class="form-group my-4">
+									<div class="input-group">
+										<i class="fa fa-user fa-lg" style="margin-right: 20px; margin-top: 10px;"></i></span>
+										<input type=" text" id="username" class="form-control" name="username"
+											placeholder="Username" required autocomplete="username">
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="input-group">
+										<i class="fa fa-lock fa-lg" style="margin-right: 20px; margin-top: 10px;"></i></span>
+										<input type="password" id="password" class="form-control" name="password" placeholder="Password"
+											required autocomplete="current-password">
+									</div>
+								</div>
+								<div class="form-group" style="margin-top: 40px;">
+									<button type="submit" class="btn btn-raised btn-primary login-btn btn-block"
+										style="border-radius: 20px;">Log In</button>
+								</div>
+								<div class="clearfix text-center">
+									<a href="#" id="linkContra" class="pull-right">Forgot your Password?</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<!-- JQuery JS -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+		<!-- popper JS -->
+		<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+			integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous">
+		</script>
+
+		<!-- bootstrap material design JS -->
+		<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+			integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous">
+		</script>
+
+		<script src="js/vanta/three.r92.min.js"></script>
+		<script src="js/vanta/vanta.waves.min.js"></script>
+		<script src="js/usuario/login.js"></script>
+	</footer>
+</body>
+
+</html>

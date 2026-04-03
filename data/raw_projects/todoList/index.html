@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h1>todos</h1>
+    <p>Enter your todo list bellow and track your daily productivity</p>
+    <form>
+        <input type="text" class="todo-input"placeholder="Enter todo" />
+        <button class="todo-button" type="submit">
+          <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+          <select name="todos" class="filter-todo">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+      </form>
+      <div class="todo-wrapper">
+        <ul class="todo-list"></ul>
+        <!-- <div class="todo" >
+          <li class="todo-item"></li>
+          <i class="fas fa-check" class="done-btn"></i>
+          <i class="fas fa-trash" class="delete-btn"></i>
+        </div> -->
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
