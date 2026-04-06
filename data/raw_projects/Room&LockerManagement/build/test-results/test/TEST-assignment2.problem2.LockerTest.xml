@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assignment2.problem2.LockerTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2022-02-19T03:13:40" hostname="MacBook-Air.local" time="0.021">
+  <properties/>
+  <testcase name="getMaxDepth()" classname="assignment2.problem2.LockerTest" time="0.0"/>
+  <testcase name="getMaxWidth()" classname="assignment2.problem2.LockerTest" time="0.002"/>
+  <testcase name="addMail()" classname="assignment2.problem2.LockerTest" time="0.0"/>
+  <testcase name="mismatchRecipient()" classname="assignment2.problem2.LockerTest" time="0.002"/>
+  <testcase name="invalidLockerSize()" classname="assignment2.problem2.LockerTest" time="0.002"/>
+  <testcase name="testToString()" classname="assignment2.problem2.LockerTest" time="0.0"/>
+  <testcase name="pickupMail()" classname="assignment2.problem2.LockerTest" time="0.001"/>
+  <testcase name="getMaxHeight()" classname="assignment2.problem2.LockerTest" time="0.001"/>
+  <testcase name="occupiedLocker()" classname="assignment2.problem2.LockerTest" time="0.001"/>
+  <testcase name="testHashCode()" classname="assignment2.problem2.LockerTest" time="0.001"/>
+  <testcase name="emptyLocker()" classname="assignment2.problem2.LockerTest" time="0.001"/>
+  <testcase name="testEquals()" classname="assignment2.problem2.LockerTest" time="0.0"/>
+  <testcase name="exceedsMailSize()" classname="assignment2.problem2.LockerTest" time="0.001"/>
+  <testcase name="getMailItem()" classname="assignment2.problem2.LockerTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

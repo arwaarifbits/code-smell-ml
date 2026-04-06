@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Civilian.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab04</a> &gt; <a href="index.source.html" class="el_package">problem2</a> &gt; <span class="el_source">Civilian.java</span></div><h1>Civilian.java</h1><pre class="source lang-java linenums">package problem2;
+
+import java.util.Objects;
+
+/**
+ * Civilian is a piece contains name, age and wealth. Civilian is the subclass of AbstractPiece.
+ */
+public class Civilian extends AbstractPiece{
+  private Double wealth;
+<span class="fc" id="L10">  private static final Double minWealth = 0.00;</span>
+
+  /**
+   * Constructor that creates a new Civilian object with the name, age and wealth
+   *
+   * @param name   - name of the new civilian object, Name class
+   * @param age    - age of the new civilian object, Integer
+   * @param wealth - wealth of the new civilian object, Double
+   * @throws IncorrectAgeException if the age is not valid.
+   * @throws IncorrectWealthAmountException if the wealth is not valid.
+   */
+  public Civilian(Name name, Integer age, Double wealth) throws IncorrectAgeException, IncorrectWealthAmountException
+  {
+<span class="fc" id="L23">    super(name, age);</span>
+<span class="fc" id="L24">    this.isValidWealth(wealth);</span>
+<span class="fc" id="L25">    this.wealth = wealth;</span>
+<span class="fc" id="L26">  }</span>
+
+
+  /**
+   * Checks whether the wealth is valid
+   * @param wealth The wealth to check, double
+   * @throws IncorrectWealthAmountException if the wealth is smaller than 0
+   */
+  private void isValidWealth(Double wealth) throws IncorrectWealthAmountException{
+<span class="fc bfc" id="L35" title="All 2 branches covered.">    if(wealth &lt; minWealth){</span>
+<span class="fc" id="L36">      throw new IncorrectWealthAmountException(&quot;Wealth Amount should not be negative!&quot;);</span>
+    }
+<span class="fc" id="L38">  }</span>
+
+  /**
+   * Checks whether the wealth is valid to decrease
+   * @param wealth The wealth to check, double
+   * @throws IncorrectWealthAmountException if the wealth is smaller than 0
+   */
+  private void isValidDecreaseWealth(Double wealth) throws IncorrectWealthAmountException{
+<span class="fc" id="L46">    this.isValidWealth(wealth);</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">    if(this.wealth &lt; wealth){</span>
+<span class="fc" id="L48">      throw new IncorrectWealthAmountException(&quot;Wealth Deduction Amount is larger than original amount!&quot;);</span>
+    }
+<span class="fc" id="L50">  }</span>
+
+
+  /**
+   * An increase method in the civilian's wealth.
+   * @param number The increasing amount of wealth, double
+   * @throws IncorrectWealthAmountException if the amount is smaller than 0.
+   */
+  @Override
+  public void increase(Double number)
+      throws IncorrectWealthAmountException {
+<span class="fc" id="L61">    this.isValidWealth(number);</span>
+<span class="fc" id="L62">    this.wealth += number;</span>
+<span class="fc" id="L63">  }</span>
+
+
+  /**
+   * A decrease method in the civilian's wealth.
+   * @param number The decreasing amount of wealth, double
+   * @throws IncorrectWealthAmountException if the amount is smaller than 0 or too large to minus.
+   */
+  @Override
+  public void decrease(Double number)
+      throws IncorrectWealthAmountException{
+<span class="fc" id="L74">    this.isValidDecreaseWealth(number);</span>
+<span class="fc" id="L75">    this.wealth -= number;</span>
+<span class="fc" id="L76">  }</span>
+
+  /**
+   * Returns the wealth of the Civilian.
+   *
+   * @return the wealth of the Civilian.
+   */
+  public Double getWealth() {
+<span class="fc" id="L84">    return this.wealth;</span>
+  }
+
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L89" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L90">      return true;</span>
+    }
+<span class="pc bpc" id="L92" title="1 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L93">      return false;</span>
+    }
+<span class="fc bfc" id="L95" title="All 2 branches covered.">    if (!super.equals(o)) {</span>
+<span class="fc" id="L96">      return false;</span>
+    }
+<span class="fc" id="L98">    Civilian civilian = (Civilian) o;</span>
+<span class="fc" id="L99">    return wealth.equals(civilian.wealth);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L104">    return Objects.hash(super.hashCode(), wealth);</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L109">    return &quot;Civilian{&quot; +</span>
+        &quot;wealth=&quot; + wealth +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

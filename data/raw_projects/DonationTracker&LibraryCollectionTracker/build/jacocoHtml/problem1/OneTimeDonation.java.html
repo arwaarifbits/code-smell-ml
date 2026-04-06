@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OneTimeDonation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment5</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">OneTimeDonation.java</span></div><h1>OneTimeDonation.java</h1><pre class="source lang-java linenums">package problem1;
+
+import java.time.LocalDateTime;
+
+/**
+ * This is a OneTimeDonation class which is the subclass of the AbstractDonation Represent the One
+ * Time Donation.
+ */
+public class OneTimeDonation extends AbstractDonation {
+
+  /**
+   * Constructor for OneTimeDonation with amount and created dateTime
+   *
+   * @param amount   - the donation amount, double
+   * @param dateTime - the donation created time, local date time
+   */
+  public OneTimeDonation(Double amount, LocalDateTime dateTime) {
+<span class="fc" id="L18">    super(amount, dateTime);</span>
+<span class="fc" id="L19">  }</span>
+
+  /**
+   * Calculate the total OneTimeDonation amount in the given year
+   *
+   * @param year - the year given to calculate the donation amount, integer
+   * @return the total OneTimeDonation amount in the given year, double
+   */
+  @Override
+  public Double calculateDonationThisYear(int year) {
+<span class="fc bfc" id="L29" title="All 2 branches covered.">    if (this.getDateTime().getYear() == year) {</span>
+<span class="fc" id="L30">      return this.getAmount();</span>
+    }
+<span class="fc" id="L32">    return 0.0;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L40">    return &quot;OneTimeDonation:&quot; + super.toString();</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

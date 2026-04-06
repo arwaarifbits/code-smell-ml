@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Room.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment2</a> &gt; <a href="index.source.html" class="el_package">assignment2.problem1</a> &gt; <span class="el_source">Room.java</span></div><h1>Room.java</h1><pre class="source lang-java linenums">package assignment2.problem1;
+
+import java.util.Objects;
+
+/**
+ * This is a Room class which is a master class. It represents room with a maximum occupancy, a
+ * price, a number of guests.
+ */
+public class Room {
+
+  private Integer maxOccupancy;
+  private Double price;
+  private Integer guestNumber;
+<span class="fc" id="L14">  private static final Integer FREE = 0;</span>
+
+  /**
+   * Constructor for room object with specific maximum occupancy, price and number of guests. When
+   * the room is first created in the system, the number of guests should be 0.
+   *
+   * @param maxOccupancy - maximum occupancy, integer
+   * @param price        - price, double
+   * @throws InvalidPriceException if the price is less than or equal 0
+   */
+  public Room(Integer maxOccupancy, Double price)
+<span class="fc" id="L25">      throws InvalidPriceException {</span>
+<span class="fc" id="L26">    this.maxOccupancy = maxOccupancy;</span>
+<span class="fc" id="L27">    this.isValidPrice(price);</span>
+<span class="fc" id="L28">    this.price = price;</span>
+<span class="fc" id="L29">    this.guestNumber = FREE;</span>
+<span class="fc" id="L30">  }</span>
+
+  /**
+   * Check if the room is available or not. The room is considered available if the number of guests
+   * is 0. If there are 1 or more guests, the room is not available.
+   *
+   * @return true if number of guests is 0 otherwise return false
+   */
+  public boolean isAvailable() {
+<span class="fc bfc" id="L39" title="All 2 branches covered.">    if (this.guestNumber == 0) {</span>
+<span class="fc" id="L40">      return true;</span>
+    } else {
+<span class="fc" id="L42">      return false;</span>
+    }
+  }
+
+  /**
+   * Check whether the number of guests that would like to stay in the room is valid
+   *
+   * @param guests - the number of guests that would like to stay in the room, integer
+   * @throws InvalidGuestNumberException if the number of guests out of range
+   */
+  private void isValidGuest(int guests) throws InvalidGuestNumberException {
+<span class="fc bfc" id="L53" title="All 2 branches covered.">    if (guests &lt; 0) {</span>
+<span class="fc" id="L54">      throw new InvalidGuestNumberException(&quot;Guests number should not be negative!&quot;);</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">    } else if (guests &gt; this.maxOccupancy) {</span>
+<span class="fc" id="L56">      throw new InvalidGuestNumberException(&quot;Guest number should not larger than max occupancy!&quot;);</span>
+    }
+<span class="fc" id="L58">  }</span>
+
+  /**
+   * Check whether the price is valid
+   *
+   * @param price - the price of the room, double
+   * @throws InvalidPriceException when the price is less than or equal 0
+   */
+  private void isValidPrice(double price) throws InvalidPriceException {
+<span class="fc bfc" id="L67" title="All 2 branches covered.">    if (price &lt;= 0) {</span>
+<span class="fc" id="L68">      throw new InvalidPriceException(&quot;Price should larger than 0!&quot;);</span>
+    }
+<span class="fc" id="L70">  }</span>
+
+  /**
+   * Check whether the room is free
+   *
+   * @throws InvalidRoomException when the room is not free
+   */
+  private void isFree() throws InvalidRoomException {
+<span class="fc bfc" id="L78" title="All 2 branches covered.">    if (!this.isAvailable()) {</span>
+<span class="fc" id="L79">      throw new InvalidRoomException(&quot;The room is not free!&quot;);</span>
+    }
+<span class="fc" id="L81">  }</span>
+
+  /**
+   * To set the room's number of guest if the room is free and the number of guest
+   * is valid
+   *
+   * @param guests - the number of guests that would like to stay in the room, integer
+   * @throws InvalidRoomException        when the room is not free
+   * @throws InvalidGuestNumberException if the number of guests out of range
+   */
+  public void bookRoom(int guests) throws InvalidRoomException, InvalidGuestNumberException {
+<span class="fc" id="L92">    this.isFree();</span>
+<span class="fc" id="L93">    this.isValidGuest(guests);</span>
+<span class="fc" id="L94">    this.guestNumber = guests;</span>
+<span class="fc" id="L95">  }</span>
+
+  /**
+   * Returns the max occupancy of the room.
+   *
+   * @return the max occupancy of the room. Integer.
+   */
+  public Integer getMaxOccupancy() {
+<span class="fc" id="L103">    return this.maxOccupancy;</span>
+  }
+
+  /**
+   * Returns the price of the room.
+   *
+   * @return the price of the room. Double.
+   */
+  public Double getPrice() {
+<span class="fc" id="L112">    return this.price;</span>
+  }
+
+  /**
+   * Returns the guest number of the room.
+   *
+   * @return the guest number of the room. integer.
+   */
+  public Integer getGuestNumber() {
+<span class="fc" id="L121">    return this.guestNumber;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L129" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L130">      return true;</span>
+    }
+<span class="pc bpc" id="L132" title="1 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L133">      return false;</span>
+    }
+<span class="fc" id="L135">    Room room = (Room) o;</span>
+<span class="pc bpc" id="L136" title="2 of 6 branches missed.">    return maxOccupancy.equals(room.maxOccupancy) &amp;&amp; price.equals(room.price) &amp;&amp; guestNumber.equals(</span>
+        room.guestNumber);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L145">    return Objects.hash(maxOccupancy, price, guestNumber);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L153">    return &quot;Room{&quot; +</span>
+        &quot;maxOccupancy=&quot; + maxOccupancy +
+        &quot;, price=&quot; + price +
+        &quot;, guestNumber=&quot; + guestNumber +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

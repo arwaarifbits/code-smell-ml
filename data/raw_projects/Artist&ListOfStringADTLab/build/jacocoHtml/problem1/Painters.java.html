@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Painters.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab05</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">Painters.java</span></div><h1>Painters.java</h1><pre class="source lang-java linenums">package problem1;
+
+/**
+ * This is Painters class which is the subclass of the FineArtPerson with name, age, genres, award,
+ * exhibits
+ */
+public class Painters extends FineArtPerson{
+  /**
+   * Constructor for Painters, painter object with name, age, genres, award, exhibit
+   *
+   * @param name       - Name, name class
+   * @param age        - age, integer
+   * @param genres     - genres, string array
+   * @param award      - all award, string array
+   * @param exhibits   - all exhibits, string array
+   * @throws InvalidAgeException when age is out of range
+   */
+  public Painters(Name name, Integer age, String[] genres, String[] award,
+      String[] exhibits) throws InvalidAgeException {
+<span class="fc" id="L20">    super(name, age, genres, award, exhibits);</span>
+<span class="fc" id="L21">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Painting.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment3</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">Painting.java</span></div><h1>Painting.java</h1><pre class="source lang-java linenums">package problem1;
+
+/**
+ * This is a Painting class which is the subclass of the Interior. Represent the Interior Painting
+ * Service.
+ */
+public class Painting extends Interior {
+
+<span class="fc" id="L9">  private static final Integer BASE = 80;</span>
+<span class="fc" id="L10">  private static final Integer LARGE_HOUR = 24;</span>
+<span class="fc" id="L11">  private static final Integer SMALL_MEDIUM_HOUR = 16;</span>
+
+  /**
+   * Constructor for Painting with propertyAddress, propertySize, carriedOutMonthly numberOfServices
+   * and numberOfPets
+   *
+   * @param propertyAddress   - the property address, represented as a String
+   * @param propertySize      - the property size, represented as an enum
+   * @param carriedOutMonthly - whether the service is carried out monthly, represented as boolean
+   * @param numberOfServices  - The number of services previously carried out at the address,
+   *                          represented as an Integer
+   * @param numberOfPets      - The number of pets the property owns, represent as Integer
+   */
+  public Painting(String propertyAddress, PropertySize propertySize, boolean carriedOutMonthly,
+      int numberOfServices, int numberOfPets) {
+<span class="fc" id="L26">    super(propertyAddress, propertySize, carriedOutMonthly, numberOfServices, numberOfPets);</span>
+<span class="fc" id="L27">  }</span>
+
+  /**
+   * Calculate the base fee for interior painting service with base fee per hour and total hours The
+   * time needed to complete the service is 16 hours for small and medium-sized properties, and 24
+   * hours for large properties.
+   *
+   * @return calculated base fee, double
+   */
+  @Override
+  public double calculateBaseFee() {
+<span class="fc bfc" id="L38" title="All 4 branches covered.">    if (this.getPropertySize() == PropertySize.SMALL || getPropertySize() == PropertySize.MEDIUM) {</span>
+<span class="fc" id="L39">      return SMALL_MEDIUM_HOUR * BASE;</span>
+    }
+<span class="fc" id="L41">    return LARGE_HOUR * BASE;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L49">    return &quot;Painting:&quot; + super.toString();</span>
+  }
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

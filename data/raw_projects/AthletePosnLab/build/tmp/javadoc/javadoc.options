@@ -1,0 +1,11 @@
+-classpath '/Users/yiming/lab3/build/classes/java/main:/Users/yiming/lab3/build/resources/main'
+-d '/Users/yiming/lab3/build/docs/javadoc'
+-doctitle 'lab3 1.0 API'
+-notimestamp 
+-quiet 
+-windowtitle 'lab3 1.0 API'
+'/Users/yiming/lab3/src/main/java/problem1/Athlete.java'
+'/Users/yiming/lab3/src/main/java/problem1/Runner.java'
+'/Users/yiming/lab3/src/main/java/problem1/BaseballPlayer.java'
+'/Users/yiming/lab3/src/main/java/problem1/Name.java'
+'/Users/yiming/lab3/src/main/java/problem2/Posn.java'

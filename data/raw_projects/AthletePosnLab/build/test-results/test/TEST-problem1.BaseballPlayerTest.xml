@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem1.BaseballPlayerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-02-10T22:12:27" hostname="MacBook-Air.local" time="0.018">
+  <properties/>
+  <testcase name="setSeasonHomeRuns()" classname="problem1.BaseballPlayerTest" time="0.001"/>
+  <testcase name="getSeasonHomeRuns()" classname="problem1.BaseballPlayerTest" time="0.001"/>
+  <testcase name="getTeam()" classname="problem1.BaseballPlayerTest" time="0.001"/>
+  <testcase name="setAverageBatting()" classname="problem1.BaseballPlayerTest" time="0.002"/>
+  <testcase name="getAverageBatting()" classname="problem1.BaseballPlayerTest" time="0.001"/>
+  <testcase name="setTeam()" classname="problem1.BaseballPlayerTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

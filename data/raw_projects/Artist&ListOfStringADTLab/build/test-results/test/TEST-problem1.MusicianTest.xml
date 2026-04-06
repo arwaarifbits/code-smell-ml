@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem1.MusicianTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-02-23T22:39:04" hostname="MacBook-Air.local" time="0.011">
+  <properties/>
+  <testcase name="getRecordCompany()" classname="problem1.MusicianTest" time="0.008"/>
+  <testcase name="receiveAward()" classname="problem1.MusicianTest" time="0.001"/>
+  <testcase name="getRecordAlbum()" classname="problem1.MusicianTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem2.FarmerTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-02-17T22:48:50" hostname="MacBook-Air.local" time="0.031">
+  <properties/>
+  <testcase name="negativeWealth()" classname="problem2.FarmerTest" time="0.002"/>
+  <testcase name="largeAge()" classname="problem2.FarmerTest" time="0.001"/>
+  <testcase name="testToString()" classname="problem2.FarmerTest" time="0.002"/>
+  <testcase name="invalidDecrease()" classname="problem2.FarmerTest" time="0.001"/>
+  <testcase name="increase()" classname="problem2.FarmerTest" time="0.001"/>
+  <testcase name="negativeAge()" classname="problem2.FarmerTest" time="0.001"/>
+  <testcase name="decrease()" classname="problem2.FarmerTest" time="0.001"/>
+  <testcase name="testHashCode()" classname="problem2.FarmerTest" time="0.0"/>
+  <testcase name="testEquals()" classname="problem2.FarmerTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,18 @@
+What is the capital of France?
+Paris
+London
+Berlin
+Rome
+A
+Which language is used for Android Development?
+Python
+Java
+C++
+Ruby
+B
+Who is known as the father of Computers?
+Charles Babbage
+Alan Turing
+Tim Berners-Lee
+Bill Gates
+A

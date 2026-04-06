@@ -1,0 +1,12 @@
+-classpath '/Users/yiming/Desktop/Assignment1/build/classes/java/main:/Users/yiming/Desktop/Assignment1/build/resources/main'
+-d '/Users/yiming/Desktop/Assignment1/build/docs/javadoc'
+-doctitle 'Assignment1 1.0 API'
+-notimestamp 
+-quiet 
+-windowtitle 'Assignment1 1.0 API'
+'/Users/yiming/Desktop/Assignment1/src/main/java/problem1/Owner.java'
+'/Users/yiming/Desktop/Assignment1/src/main/java/problem1/Vehicle.java'
+'/Users/yiming/Desktop/Assignment1/src/main/java/problem2/Time.java'
+'/Users/yiming/Desktop/Assignment1/src/main/java/problem2/Trip.java'
+'/Users/yiming/Desktop/Assignment1/src/main/java/problem3/Amount.java'
+'/Users/yiming/Desktop/Assignment1/src/main/java/problem3/Account.java'

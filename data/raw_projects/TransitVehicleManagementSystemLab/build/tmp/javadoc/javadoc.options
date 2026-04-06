@@ -1,0 +1,12 @@
+-classpath '/Users/yiming/Documents/lab06/build/classes/java/main:/Users/yiming/Documents/lab06/build/resources/main'
+-d '/Users/yiming/Documents/lab06/build/docs/javadoc'
+-doctitle 'lab06 1.0 API'
+-notimestamp 
+-quiet 
+-windowtitle 'lab06 1.0 API'
+'/Users/yiming/Documents/lab06/src/main/java/Problem1AndProblem2/Boat.java'
+'/Users/yiming/Documents/lab06/src/main/java/Problem1AndProblem2/Train.java'
+'/Users/yiming/Documents/lab06/src/main/java/Problem1AndProblem2/FleetManager.java'
+'/Users/yiming/Documents/lab06/src/main/java/Problem1AndProblem2/TripReport.java'
+'/Users/yiming/Documents/lab06/src/main/java/Problem1AndProblem2/Vehicle.java'
+'/Users/yiming/Documents/lab06/src/main/java/Problem1AndProblem2/Bus.java'

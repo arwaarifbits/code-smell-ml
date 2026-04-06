@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="assignment2.problem1.RoomTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2022-02-19T03:13:40" hostname="MacBook-Air.local" time="0.116">
+  <properties/>
+  <testcase name="isFree()" classname="assignment2.problem1.RoomTest" time="0.066"/>
+  <testcase name="testToString()" classname="assignment2.problem1.RoomTest" time="0.021"/>
+  <testcase name="getMaxOccupancy()" classname="assignment2.problem1.RoomTest" time="0.001"/>
+  <testcase name="negativeGuest()" classname="assignment2.problem1.RoomTest" time="0.003"/>
+  <testcase name="negativePrice()" classname="assignment2.problem1.RoomTest" time="0.002"/>
+  <testcase name="getGuestNumber()" classname="assignment2.problem1.RoomTest" time="0.0"/>
+  <testcase name="isAvailable()" classname="assignment2.problem1.RoomTest" time="0.007"/>
+  <testcase name="testHashCode()" classname="assignment2.problem1.RoomTest" time="0.001"/>
+  <testcase name="testEquals()" classname="assignment2.problem1.RoomTest" time="0.0"/>
+  <testcase name="getPrice()" classname="assignment2.problem1.RoomTest" time="0.0"/>
+  <testcase name="bookRoom()" classname="assignment2.problem1.RoomTest" time="0.001"/>
+  <testcase name="tooManyGuest()" classname="assignment2.problem1.RoomTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LinkedList.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab05</a> &gt; <a href="index.source.html" class="el_package">problem2</a> &gt; <span class="el_source">LinkedList.java</span></div><h1>LinkedList.java</h1><pre class="source lang-java linenums">package problem2;
+
+import java.util.Objects;
+
+public class LinkedList implements ListOfString {
+
+  private Integer listSize;
+  private Node head;
+
+  /**
+   * Constructor for the linked list, create a new linked list, initialize it with size 0 and null
+   * head
+   */
+<span class="fc" id="L14">  public LinkedList() {</span>
+<span class="fc" id="L15">    this.listSize = 0;</span>
+<span class="fc" id="L16">    this.head = null;</span>
+<span class="fc" id="L17">  }</span>
+
+  /**
+   * Add the string into the linked list
+   *
+   * @param string string will be added
+   */
+  @Override
+  public void add(String string) {
+    //create a new node
+<span class="fc" id="L27">    Node newNode = new Node(string, null);</span>
+    //If the Linked List is empty, make the new node as head
+<span class="fc bfc" id="L29" title="All 2 branches covered.">    if (this.head == null) {</span>
+<span class="fc" id="L30">      this.head = newNode;</span>
+    } else {
+      //else traverse till the last node
+      //and insert the new node there
+<span class="fc" id="L34">      Node curr = this.head;</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">      while (curr.getNext() != null) {</span>
+<span class="fc" id="L36">        curr = curr.getNext();</span>
+      }
+<span class="fc" id="L38">      curr.setNext(newNode);</span>
+    }
+    //update size
+<span class="fc" id="L41">    this.listSize += 1;</span>
+<span class="fc" id="L42">  }</span>
+
+  /**
+   * Checks whether the list is empty.
+   *
+   * @return True if the list is empty otherwise False
+   */
+  @Override
+  public boolean isEmpty() {
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">    return this.listSize == 0;</span>
+  }
+
+  /**
+   * Gets the total number of elements in the list
+   *
+   * @return the size of the linked list, integer
+   */
+  @Override
+  public Integer size() {
+<span class="fc" id="L61">    return this.listSize;</span>
+  }
+
+  /**
+   * Consumes a String, and checks if the String is in the list or not.
+   *
+   * @param string - another string
+   * @return True if the String is in the list, otherwise False
+   */
+  @Override
+  public boolean contains(String string) {
+<span class="fc" id="L72">    Node curr = this.head;</span>
+    //traversal
+<span class="fc bfc" id="L74" title="All 2 branches covered.">    while (curr != null) {</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">      if (curr.getStringValue() == string) {</span>
+<span class="fc" id="L76">        return true;</span>
+      }
+<span class="fc" id="L78">      curr = curr.getNext();</span>
+    }
+<span class="fc" id="L80">    return false;</span>
+  }
+
+  /**
+   * Consumes another list of Strings, and checks that all elements of this list are in the list
+   * passed as argument.
+   *
+   * @param list - another list of strings
+   * @return True if all elements of this list are in the list passed as argument otherwise False
+   */
+  @Override
+  public boolean containsAll(LinkedList list) {
+<span class="fc" id="L92">    Node curr = this.head;</span>
+    //traversal
+<span class="pc bpc" id="L94" title="1 of 2 branches missed.">    while (curr != null) {</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">      if (!list.contains(curr.getStringValue())) {</span>
+<span class="fc" id="L96">        return false;</span>
+      }
+<span class="nc" id="L98">      curr = curr.getNext();</span>
+    }
+<span class="nc" id="L100">    return true;</span>
+  }
+
+  /**
+   * Check if the list has at least one duplicate element
+   *
+   * @return True if list has at least one duplicate element otherwise False
+   */
+  @Override
+  public boolean hasDuplicates() {
+<span class="pc bpc" id="L110" title="1 of 2 branches missed.">    while (this.head.getNext() != null) { //iterate the head</span>
+      //starting from the next
+<span class="fc" id="L112">      Node curr = head.getNext();</span>
+<span class="pc bpc" id="L113" title="1 of 2 branches missed.">      while (curr != null) { // iterate the curr</span>
+        //if duplicate node is found
+<span class="pc bpc" id="L115" title="1 of 2 branches missed.">        if (head.getStringValue() == curr.getStringValue()) {</span>
+<span class="fc" id="L116">          return true;</span>
+        }
+<span class="nc" id="L118">        curr = curr.getNext();</span>
+      }
+<span class="nc" id="L120">      head = head.getNext();</span>
+<span class="nc" id="L121">    }</span>
+<span class="nc" id="L122">    return false;</span>
+  }
+
+  /**
+   * Return the list with all duplicates removed
+   *
+   * @return the list with all duplicates removed
+   */
+  @Override
+  public LinkedList removeDuplicates() {
+<span class="fc" id="L132">    LinkedList newList = new LinkedList();</span>
+<span class="fc" id="L133">    Node curr = this.head;</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">    while (curr != null) {</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">      if (!newList.contains(curr.getStringValue())) {</span>
+<span class="fc" id="L136">        newList.add(curr.getStringValue());</span>
+      }
+<span class="fc" id="L138">      curr = curr.getNext();</span>
+    }
+<span class="fc" id="L140">    return newList;</span>
+  }
+
+  /**
+   * Takes the maximum String length, and returns a list with all elements whose length is greater
+   * than the maximum length removed
+   *
+   * @param length - maximum string length
+   * @return returns a list with all elements whose length is greater than the maximum length
+   * removed
+   */
+  @Override
+  public LinkedList filterLargerThan(Integer length) {
+<span class="fc" id="L153">    LinkedList newList = new LinkedList();</span>
+<span class="fc" id="L154">    Node curr = this.head;</span>
+<span class="fc bfc" id="L155" title="All 2 branches covered.">    while (curr != null) {</span>
+<span class="fc bfc" id="L156" title="All 2 branches covered.">      if (curr.getStringValue().length() &lt;= length) {</span>
+<span class="fc" id="L157">        newList.add(curr.getStringValue());</span>
+      }
+<span class="fc" id="L159">      curr = curr.getNext();</span>
+    }
+<span class="fc" id="L161">    return newList;</span>
+  }
+
+  /**
+   * Return the head node, node class
+   *
+   * @return the linked list head node
+   */
+  public Node getHead() {
+<span class="fc" id="L170">    return this.head;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="nc bnc" id="L178" title="All 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L179">      return true;</span>
+    }
+<span class="nc bnc" id="L181" title="All 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L182">      return false;</span>
+    }
+<span class="nc" id="L184">    LinkedList that = (LinkedList) o;</span>
+<span class="nc bnc" id="L185" title="All 4 branches missed.">    return listSize.equals(that.listSize) &amp;&amp; head.equals(that.head);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="nc" id="L193">    return Objects.hash(listSize, head);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="nc" id="L201">    return &quot;LinkedList{&quot; +</span>
+        &quot;listSize=&quot; + listSize +
+        &quot;, head=&quot; + head +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

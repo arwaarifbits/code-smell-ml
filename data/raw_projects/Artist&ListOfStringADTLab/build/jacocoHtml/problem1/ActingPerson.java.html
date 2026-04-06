@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ActingPerson.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab05</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">ActingPerson.java</span></div><h1>ActingPerson.java</h1><pre class="source lang-java linenums">package problem1;
+
+import java.util.Arrays;
+
+/**
+ * This is ActingPerson class and subclass of AbstractArtist. Represent any of Actor, Dancer,
+ * Filmmakers with three more fields, movies, series, multimedia
+ */
+public class ActingPerson extends AbstractArtist {
+
+  private String[] movies;
+  private String[] series;
+  private String[] multimedia;
+
+  /**
+   * Constructor for ActingPerson, Represent any of Actor, Dancer, Filmmakers with three more
+   * specific fields, movies, series, multimedia
+   *
+   * @param name       - ActingPerson's Name, Name class
+   * @param age        - ActingPerson's Age, Integer
+   * @param genres     - representing an ActingPerson’s genres, string array
+   * @param award      - representing all awards that an ActingPerson received, string array
+   * @param movies     - listing all movies that they worked on (acted in), string array
+   * @param series     - listing all TV series that they worked on (acted in), string array
+   * @param multimedia - listing all other multimedia content that they worked on (acted in), string
+   *                   array
+   * @throws InvalidAgeException when age out of field
+   */
+  public ActingPerson(Name name, Integer age, String[] genres, String[] award,
+      String[] movies, String[] series, String[] multimedia) throws InvalidAgeException {
+<span class="fc" id="L31">    super(name, age, genres, award);</span>
+<span class="fc" id="L32">    this.movies = movies;</span>
+<span class="fc" id="L33">    this.series = series;</span>
+<span class="fc" id="L34">    this.multimedia = multimedia;</span>
+<span class="fc" id="L35">  }</span>
+
+  /**
+   * add the award to their current array of awards,
+   * @param award - the award that will be added
+   * @return A copy ActingPerson object with updated array of awards.
+   */
+  @Override
+  public ActingPerson receiveAward(String award) throws InvalidAgeException {
+<span class="fc" id="L44">    int originalAwardLength = this.getAward().length;</span>
+<span class="fc" id="L45">    String[] newAwardList = new String[originalAwardLength + 1];</span>
+<span class="fc" id="L46">    System.arraycopy(this.getAward(), 0, newAwardList,0, originalAwardLength);</span>
+<span class="fc" id="L47">    newAwardList[newAwardList.length-1] = award;</span>
+<span class="fc" id="L48">    return new ActingPerson(this.getName(),this.getAge(),this.getGenres(),newAwardList,this.movies,this.series,this.multimedia);</span>
+  }
+
+  /**
+   * Return the movie, string array
+   * @return the movie
+   */
+  public String[] getMovies() {
+<span class="fc" id="L56">    return this.movies;</span>
+  }
+
+  /**
+   * Return the series, string array
+   * @return the movie
+   */
+  public String[] getSeries() {
+<span class="fc" id="L64">    return this.series;</span>
+  }
+
+  /**
+   * Return the multimedia, string array
+   * @return the multimedia
+   */
+  public String[] getMultimedia() {
+<span class="fc" id="L72">    return this.multimedia;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="nc bnc" id="L80" title="All 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L81">      return true;</span>
+    }
+<span class="nc bnc" id="L83" title="All 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L84">      return false;</span>
+    }
+<span class="nc bnc" id="L86" title="All 2 branches missed.">    if (!super.equals(o)) {</span>
+<span class="nc" id="L87">      return false;</span>
+    }
+<span class="nc" id="L89">    ActingPerson that = (ActingPerson) o;</span>
+<span class="nc bnc" id="L90" title="All 4 branches missed.">    return Arrays.equals(movies, that.movies) &amp;&amp; Arrays.equals(series,</span>
+<span class="nc bnc" id="L91" title="All 2 branches missed.">        that.series) &amp;&amp; Arrays.equals(multimedia, that.multimedia);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="nc" id="L99">    int result = super.hashCode();</span>
+<span class="nc" id="L100">    result = 31 * result + Arrays.hashCode(movies);</span>
+<span class="nc" id="L101">    result = 31 * result + Arrays.hashCode(series);</span>
+<span class="nc" id="L102">    result = 31 * result + Arrays.hashCode(multimedia);</span>
+<span class="nc" id="L103">    return result;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="nc" id="L111">    return &quot;ActingPerson{&quot; +</span>
+<span class="nc" id="L112">        &quot;movies=&quot; + Arrays.toString(movies) +</span>
+<span class="nc" id="L113">        &quot;, series=&quot; + Arrays.toString(series) +</span>
+<span class="nc" id="L114">        &quot;, multimedia=&quot; + Arrays.toString(multimedia) +</span>
+        '}';
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

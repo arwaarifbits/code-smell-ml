@@ -1,0 +1,13 @@
+-classpath '/Users/yiming/Documents/Assignment4/build/classes/java/main:/Users/yiming/Documents/Assignment4/build/resources/main'
+-d '/Users/yiming/Documents/Assignment4/build/docs/javadoc'
+-doctitle 'Assignment4 1.0 API'
+-notimestamp 
+-quiet 
+-windowtitle 'Assignment4 1.0 API'
+'/Users/yiming/Documents/Assignment4/src/main/java/problem1/CourseCatalog.java'
+'/Users/yiming/Documents/Assignment4/src/main/java/problem1/ICourseCatalog.java'
+'/Users/yiming/Documents/Assignment4/src/main/java/problem1/Course.java'
+'/Users/yiming/Documents/Assignment4/src/main/java/problem1/InvalidIndexException.java'
+'/Users/yiming/Documents/Assignment4/src/main/java/problem1/CourseNotFoundException.java'
+'/Users/yiming/Documents/Assignment4/src/main/java/problem2/ISet.java'
+'/Users/yiming/Documents/Assignment4/src/main/java/problem2/Set.java'

@@ -1,0 +1,45 @@
+---------------------------------------
+            NOTES & INFO
+---------------------------------------
+
+JAVA:  
+  - High level Programming Language based on Object Oriented Programming (OOPs) 
+  - Multiuser System
+  - Platform independent
+
+Note: OOP emphasizes on DATA PROTECTION and code reusability.
+
+Core java- application and oop
+Advance java- servlets applets
+
+JDK - Java Development Kit is a bundle of software development tools used for building various Java apllications such as, servlets, applets
+      And also, for compiling, debugging and executing Java programs.
+      It contain JRE to execute the software.
+      
+JRE - Java Runtime Environment. It is used to execute java programs.
+      JRE is made up of JVM
+
+JVM - Java Virtual Machine. 
+      It is an integral part of JRE
+      It executes the java programs
+      JVM is platform dependent
+      It translates the byte code ( .class files ) into an executable code. This executable code is different in different platforms or OS.
+
+1) Source Code: .java
+2) Byte Code: .class
+3) Executable Code: depends on OS E.g .ctxt in windows via Bluej IDE/ Notepad
+
+(1) compile --> (2) Interpreter --> (3)
+
+cmd to compile ur java file   :  javac filename.java 
+cmd to run ur java program    :  java classname
+cmd to compile all java files :  javac *.java
+
+NOTE: 
+A filename and classname can be different but in that case the classname cannot be made public.
+But we mainly do classname same as filename such that user don't need to get the source code to see the classname and then execute the code via cmds.
+
+CLA: Command Line Arguments
+java className "argument 1" "argument 2"
+OR java className this is an argument.
+Like these we pass CLA in terminals.

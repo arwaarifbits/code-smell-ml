@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem1.DancersTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-02-23T22:39:04" hostname="MacBook-Air.local" time="0.09">
+  <properties/>
+  <testcase name="invalidAge()" classname="problem1.DancersTest" time="0.061"/>
+  <testcase name="getAge()" classname="problem1.DancersTest" time="0.007"/>
+  <testcase name="receiveAward()" classname="problem1.DancersTest" time="0.002"/>
+  <testcase name="getName()" classname="problem1.DancersTest" time="0.003"/>
+  <testcase name="getMovies()" classname="problem1.DancersTest" time="0.002"/>
+  <testcase name="getSeries()" classname="problem1.DancersTest" time="0.001"/>
+  <testcase name="getAward()" classname="problem1.DancersTest" time="0.001"/>
+  <testcase name="getGenre()" classname="problem1.DancersTest" time="0.001"/>
+  <testcase name="getMedia()" classname="problem1.DancersTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

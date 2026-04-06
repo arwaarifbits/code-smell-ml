@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/yiming/lab04/src/main/java/problem2</OriginalElement>
+  <nodes>
+    <node x="0.0" y="733.0">problem2.Engineer</node>
+    <node x="0.0" y="1086.0">problem2.IncorrectAgeException</node>
+    <node x="649.5" y="407.0">problem2.Soldier</node>
+    <node x="799.9999999999999" y="733.0">problem2.Marine</node>
+    <node x="538.9999999999999" y="733.0">problem2.Sniper</node>
+    <node x="428.99999999999994" y="0.0">problem2.Piece</node>
+    <node x="0.0" y="831.0">problem2.Name</node>
+    <node x="274.9999999999999" y="733.0">problem2.Farmer</node>
+    <node x="125.24999999999989" y="418.0">problem2.Civilian</node>
+    <node x="609.0" y="831.0">problem2.IncorrectWealthAmountException</node>
+    <node x="405.99999999999994" y="125.0">problem2.AbstractPiece</node>
+    <node x="240.0" y="831.0">problem2.IncorrectStaminaAmountException</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="problem2.AbstractPiece" target="problem2.Piece" relationship="REALIZATION">
+      <point x="0.0" y="-116.0" />
+      <point x="0.0" y="37.5" />
+    </edge>
+    <edge source="problem2.Marine" target="problem2.Soldier" relationship="GENERALIZATION">
+      <point x="1.1368683772161603E-13" y="-26.5" />
+      <point x="921.5" y="708.0" />
+      <point x="790.5" y="708.0" />
+      <point x="0.0" y="138.0" />
+    </edge>
+    <edge source="problem2.Engineer" target="problem2.Civilian" relationship="GENERALIZATION">
+      <point x="0.0" y="-26.5" />
+      <point x="127.5" y="708.0" />
+      <point x="262.2499999999999" y="708.0" />
+      <point x="0.0" y="127.0" />
+    </edge>
+    <edge source="problem2.Civilian" target="problem2.AbstractPiece" relationship="GENERALIZATION">
+      <point x="0.0" y="-127.0" />
+      <point x="262.2499999999999" y="382.0" />
+      <point x="524.4999999999999" y="382.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="problem2.Soldier" target="problem2.AbstractPiece" relationship="GENERALIZATION">
+      <point x="0.0" y="-138.0" />
+      <point x="790.5" y="382.0" />
+      <point x="524.4999999999999" y="382.0" />
+      <point x="0.0" y="116.0" />
+    </edge>
+    <edge source="problem2.Sniper" target="problem2.Soldier" relationship="GENERALIZATION">
+      <point x="0.0" y="-26.5" />
+      <point x="659.4999999999999" y="708.0" />
+      <point x="790.5" y="708.0" />
+      <point x="0.0" y="138.0" />
+    </edge>
+    <edge source="problem2.Farmer" target="problem2.Civilian" relationship="GENERALIZATION">
+      <point x="0.0" y="-26.5" />
+      <point x="396.9999999999999" y="708.0" />
+      <point x="262.2499999999999" y="708.0" />
+      <point x="0.0" y="127.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.5392579810181191" showDependencies="false" x="521.5" y="569.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

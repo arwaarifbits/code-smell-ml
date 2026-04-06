@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Set.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment4</a> &gt; <a href="index.source.html" class="el_package">problem2</a> &gt; <span class="el_source">Set.java</span></div><h1>Set.java</h1><pre class="source lang-java linenums">package problem2;
+
+import java.util.Arrays;
+import java.util.Objects;
+
+/**
+ * This is immutable class Set. Represent a set.
+ */
+public final class Set implements ISet {
+
+  private Integer[] items;
+  private int size;
+<span class="fc" id="L13">  private static final Integer DEFAULT_ARRAY_SIZE = 10;</span>
+<span class="fc" id="L14">  private static final Integer EMPTY_SIZE = 0;</span>
+
+  /**
+   * Constructor for the set. Create an initial set with default integer array and size of the set.
+   */
+<span class="fc" id="L19">  public Set() {</span>
+<span class="fc" id="L20">    this.items = new Integer[DEFAULT_ARRAY_SIZE];</span>
+<span class="fc" id="L21">    this.size = EMPTY_SIZE;</span>
+<span class="fc" id="L22">  }</span>
+
+  /**
+   * Creates and returns an empty Set
+   *
+   * @return an empty set, Set class
+   */
+  @Override
+  public Set emptySet() {
+<span class="fc" id="L31">    return new Set();</span>
+  }
+
+  /**
+   * Checks if the Set is empty.
+   *
+   * @return true if the Set contains no items, false otherwise.
+   */
+  @Override
+  public Boolean isEmpty() {
+<span class="fc bfc" id="L41" title="All 2 branches covered.">    return this.size == EMPTY_SIZE;</span>
+  }
+
+  /**
+   * Resize the items array when the items array length is not long enough to add the given integer
+   * and add the given integer.
+   *
+   * @param pastItems - the target set's items array, integer array
+   * @param n         - the number will be added to the items array, Integer
+   */
+  private void resizeCopyArray(Integer[] pastItems, Integer n) {
+<span class="fc" id="L52">    Integer[] newItems = new Integer[this.items.length + DEFAULT_ARRAY_SIZE];</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">    for (int i = 0; i &lt; this.size; i++) {</span>
+<span class="fc" id="L54">      newItems[i] = pastItems[i];</span>
+    }
+<span class="fc" id="L56">    newItems[this.size] = n;</span>
+<span class="fc" id="L57">    this.items = newItems;</span>
+<span class="fc" id="L58">  }</span>
+
+  /**
+   * Adds the given Integer to the Set if and only if that Integer is not already in the Set.
+   *
+   * @param n - the integer will be added, integer
+   * @return the set with added Integer, Set class
+   */
+  @Override
+  public Set add(Integer n) {
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">    if (!this.contains(n)) {</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">      if (this.size + 1 &gt; this.items.length) {</span>
+<span class="fc" id="L70">        this.resizeCopyArray(this.items, n);</span>
+      } else {
+<span class="fc" id="L72">        this.items[this.size] = n;</span>
+      }
+<span class="fc" id="L74">      this.size++;</span>
+<span class="fc" id="L75">      return this;</span>
+    }
+<span class="nc" id="L77">    return this;</span>
+  }
+
+  /**
+   * Check if the given integer in the Set
+   *
+   * @param n - the integer will be checked, integer
+   * @return true if the given Integer is in the Set, false otherwise.
+   */
+  @Override
+  public Boolean contains(Integer n) {
+<span class="fc bfc" id="L88" title="All 2 branches covered.">    for (int i = 0; i &lt; this.size; i++) {</span>
+<span class="fc bfc" id="L89" title="All 2 branches covered.">      if (this.items[i].equals(n)) {</span>
+<span class="fc" id="L90">        return true;</span>
+      }
+    }
+<span class="fc" id="L93">    return false;</span>
+  }
+
+  /**
+   * Remove the given Integer from the Set if and only if that Integer is already in the Set.
+   *
+   * @param n - the integer will be removed
+   * @return a copy of the Set with the given Integer removed. If the given Integer is not in the
+   * Set, returns the Set as is. Set class.
+   */
+  @Override
+  public Set remove(Integer n) {
+<span class="fc bfc" id="L105" title="All 2 branches covered.">    if (this.contains(n)) {</span>
+<span class="fc" id="L106">      Set newSet = new Set();</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">      for (int i = 0; i &lt; this.size; i++) {</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">        if (!this.items[i].equals(n)) {</span>
+<span class="fc" id="L109">          newSet.add(this.items[i]);</span>
+        }
+      }
+<span class="fc" id="L112">      return newSet;</span>
+    }
+<span class="fc" id="L114">    return this;</span>
+  }
+
+  /**
+   * Gets the number of items in the Set.
+   *
+   * @return the number of items in the Set.
+   */
+  @Override
+  public Integer size() {
+<span class="fc" id="L124">    return this.size;</span>
+  }
+
+  /**
+   * Check whether two Sets' items array have same items. The order of the item does not affect the
+   * equality. Using this helper method in override equal method.
+   *
+   * @param comparedItems - the compared items array, integer array
+   * @return true if two Sets' items array have same items (order does not matter), otherwise,
+   * return false
+   */
+  private boolean equalItems(Integer[] comparedItems) {
+<span class="fc bfc" id="L136" title="All 2 branches covered.">    for (int i = 0; i &lt; this.size; i++) {</span>
+<span class="pc bpc" id="L137" title="1 of 2 branches missed.">      if (!this.contains(comparedItems[i])) {</span>
+<span class="nc" id="L138">        return false;</span>
+      }
+    }
+<span class="fc" id="L141">    return true;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L149" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L150">      return true;</span>
+    }
+<span class="pc bpc" id="L152" title="2 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L153">      return false;</span>
+    }
+<span class="fc" id="L155">    Set set = (Set) o;</span>
+<span class="pc bpc" id="L156" title="1 of 4 branches missed.">    return size == set.size &amp;&amp; this.equalItems(set.items);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L164">    int result = Objects.hash(size);</span>
+<span class="fc" id="L165">    result = 31 * result + Arrays.hashCode(items);</span>
+<span class="fc" id="L166">    return result;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L174">    return &quot;Set{&quot; +</span>
+<span class="fc" id="L175">        &quot;items=&quot; + Arrays.toString(items) +</span>
+        &quot;, size=&quot; + size +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

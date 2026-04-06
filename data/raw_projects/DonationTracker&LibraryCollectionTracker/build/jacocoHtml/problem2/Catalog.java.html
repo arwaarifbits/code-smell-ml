@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Catalog.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment5</a> &gt; <a href="index.source.html" class="el_package">problem2</a> &gt; <span class="el_source">Catalog.java</span></div><h1>Catalog.java</h1><pre class="source lang-java linenums">package problem2;
+
+import java.util.ArrayList;
+import java.util.Objects;
+
+/**
+ * This is a Catalog class which will be used to store a collection of all the items in the library
+ * and to implement search functionality. Represent the Catalog in the library.
+ */
+public class Catalog {
+
+  private ArrayList&lt;Item&gt; itemsCollection;
+
+  /**
+   * Constructor for the catalog with itemsCollection
+   *
+   * @param itemsCollection - the items that catalog has, Item ArrayList
+   */
+<span class="fc" id="L19">  public Catalog(ArrayList&lt;Item&gt; itemsCollection) {</span>
+<span class="fc" id="L20">    this.itemsCollection = itemsCollection;</span>
+<span class="fc" id="L21">  }</span>
+
+  /**
+   * Overloaded Constructor for the catalog. ItemsCollection is null when catalog created.
+   */
+<span class="fc" id="L26">  public Catalog() {</span>
+<span class="fc" id="L27">    this.itemsCollection = new ArrayList&lt;Item&gt;();</span>
+<span class="fc" id="L28">  }</span>
+
+  /**
+   * Add item into the catalog itemsCollection
+   *
+   * @param item - the item will be added to the catalog, Item
+   */
+  public void add(Item item) {
+<span class="fc" id="L36">    this.itemsCollection.add(item);</span>
+<span class="fc" id="L37">  }</span>
+
+  /**
+   * Remove item from the catalog itemsCollection
+   *
+   * @param item - the item will be removed from the catalog, Item
+   */
+  public void remove(Item item) {
+<span class="fc" id="L45">    this.itemsCollection.remove(item);</span>
+<span class="fc" id="L46">  }</span>
+
+  /**
+   * Search Method Retrieve all items in the catalog, regardless of type, that have a title
+   * containing the keyword case-insensitive.
+   *
+   * @param keyword - the keyword will be searched, string
+   * @return all items in the catalog contains the given keyword, Item ArrayList
+   */
+  public ArrayList&lt;Item&gt; search(String keyword) {
+<span class="fc" id="L56">    ArrayList&lt;Item&gt; subset = new ArrayList&lt;Item&gt;();</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">    for (Item item : this.itemsCollection) {</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">      if (item.containKeyword(keyword)) {</span>
+<span class="fc" id="L59">        subset.add(item);</span>
+      }
+<span class="fc" id="L61">    }</span>
+<span class="fc" id="L62">    return subset;</span>
+  }
+
+  /**
+   * Overloaded Search Method Retrieve all items in the catalog that have an exact match for the
+   * given author
+   *
+   * @param author - the author will be searched, Author
+   * @return all items in the catalog that have an exact match for the given author, Item ArrayList
+   */
+  public ArrayList&lt;Item&gt; search(Author author) {
+<span class="fc" id="L73">    ArrayList&lt;Item&gt; subset = new ArrayList&lt;Item&gt;();</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">    for (Item item : this.itemsCollection) {</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">      if (item.creator.containsCreator(author)) {</span>
+<span class="fc" id="L76">        subset.add(item);</span>
+      }
+<span class="fc" id="L78">    }</span>
+<span class="fc" id="L79">    return subset;</span>
+  }
+
+  /**
+   * Overloaded Search Method Retrieve all items in the catalog that have an exact match for the
+   * given artist
+   *
+   * @param artist - the artist will be searched, RecordingArtist
+   * @return all items in the catalog that have an exact match for the given author, Item ArrayList
+   */
+  public ArrayList&lt;Item&gt; search(RecordingArtist artist) {
+<span class="fc" id="L90">    ArrayList&lt;Item&gt; subset = new ArrayList&lt;Item&gt;();</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">    for (Item item : this.itemsCollection) {</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">      if (item.creator.containsCreator(artist)) {</span>
+<span class="fc" id="L93">        subset.add(item);</span>
+      }
+<span class="fc" id="L95">    }</span>
+<span class="fc" id="L96">    return subset;</span>
+  }
+
+  /**
+   * Get the itemsCollection of the catalog
+   *
+   * @return the itemsCollection of the catalog, Item ArrayList
+   */
+  public ArrayList&lt;Item&gt; getItemsCollection() {
+<span class="fc" id="L105">    return this.itemsCollection;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L113" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L114">      return true;</span>
+    }
+<span class="pc bpc" id="L116" title="1 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L117">      return false;</span>
+    }
+<span class="fc" id="L119">    Catalog catalog = (Catalog) o;</span>
+<span class="fc" id="L120">    return Objects.equals(itemsCollection, catalog.itemsCollection);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L128">    return Objects.hash(itemsCollection);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L136">    return &quot;Catalog{&quot; +</span>
+        &quot;itemsCollection=&quot; + itemsCollection +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

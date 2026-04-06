@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Poet.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab05</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">Poet.java</span></div><h1>Poet.java</h1><pre class="source lang-java linenums">package problem1;
+
+import java.util.Objects;
+
+public class Poet extends AbstractArtist{
+  private String publishingCompany;
+  private String lastPublishedCollection;
+
+  /**
+   * Constructor for Poet, Represent poet with two more fields,
+   * publishingCompany, lastPublishedCollection
+   *
+   * @param name       - Name, name class
+   * @param age        - age, integer
+   * @param genres     - genres, string array
+   * @param award      - all award, string array
+   * @param publishingCompany   -  Poet’s publishing company, string
+   * @param lastPublishedCollection  -  the title of the latest published collection of poems, string
+   * @throws InvalidAgeException when age out of range
+   */
+  public Poet(Name name, Integer age, String[] genres, String[] award,
+      String publishingCompany, String lastPublishedCollection) throws InvalidAgeException {
+<span class="fc" id="L23">    super(name, age, genres, award);</span>
+<span class="fc" id="L24">    this.publishingCompany = publishingCompany;</span>
+<span class="fc" id="L25">    this.lastPublishedCollection = lastPublishedCollection;</span>
+<span class="fc" id="L26">  }</span>
+
+  /**
+   * add the award to their current array of awards,
+   * @param award - the award that will be added
+   * @return A copy Poet object with updated array of awards.
+   */
+  @Override
+  public Poet receiveAward(String award) throws InvalidAgeException {
+<span class="fc" id="L35">    int originalAwardLength = this.getAward().length;</span>
+<span class="fc" id="L36">    String[] newAwardList = new String[originalAwardLength + 1];</span>
+<span class="fc" id="L37">    System.arraycopy(this.getAward(), 0, newAwardList,0, originalAwardLength);</span>
+<span class="fc" id="L38">    newAwardList[newAwardList.length-1] = award;</span>
+<span class="fc" id="L39">    return new Poet(this.getName(),this.getAge(),this.getGenres(),newAwardList,this.publishingCompany, this.lastPublishedCollection);</span>
+  }
+
+  /**
+   * Return the Poet’s publishing company, string
+   * @return publishingCompany
+   */
+  public String getPublishingCompany() {
+<span class="fc" id="L47">    return this.publishingCompany;</span>
+  }
+
+  /**
+   * Return the title of the latest published collection of poems, string
+   * @return lastPublishedCollection
+   */
+  public String getLastPublishedCollection() {
+<span class="fc" id="L55">    return this.lastPublishedCollection;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="nc bnc" id="L63" title="All 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L64">      return true;</span>
+    }
+<span class="nc bnc" id="L66" title="All 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L67">      return false;</span>
+    }
+<span class="nc bnc" id="L69" title="All 2 branches missed.">    if (!super.equals(o)) {</span>
+<span class="nc" id="L70">      return false;</span>
+    }
+<span class="nc" id="L72">    Poet poet = (Poet) o;</span>
+<span class="nc bnc" id="L73" title="All 4 branches missed.">    return publishingCompany.equals(poet.publishingCompany) &amp;&amp; lastPublishedCollection.equals(</span>
+        poet.lastPublishedCollection);
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="nc" id="L82">    return Objects.hash(super.hashCode(), publishingCompany, lastPublishedCollection);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="nc" id="L90">    return &quot;Poet{&quot; +</span>
+        &quot;publishingCompany='&quot; + publishingCompany + '\'' +
+        &quot;, lastPublishedCollection='&quot; + lastPublishedCollection + '\'' +
+        '}';
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

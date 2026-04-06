@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem1.FruitTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-02-17T22:48:50" hostname="MacBook-Air.local" time="0.07">
+  <properties/>
+  <testcase name="tooLargeQuantity()" classname="problem1.FruitTest" time="0.006"/>
+  <testcase name="testToString()" classname="problem1.FruitTest" time="0.017"/>
+  <testcase name="getAvaQuantity()" classname="problem1.FruitTest" time="0.0"/>
+  <testcase name="getExpirationDate()" classname="problem1.FruitTest" time="0.003"/>
+  <testcase name="getOrderDate()" classname="problem1.FruitTest" time="0.002"/>
+  <testcase name="getName()" classname="problem1.FruitTest" time="0.001"/>
+  <testcase name="negativeQuantity()" classname="problem1.FruitTest" time="0.004"/>
+  <testcase name="testHashCode()" classname="problem1.FruitTest" time="0.008"/>
+  <testcase name="testEquals()" classname="problem1.FruitTest" time="0.004"/>
+  <testcase name="getPrice()" classname="problem1.FruitTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

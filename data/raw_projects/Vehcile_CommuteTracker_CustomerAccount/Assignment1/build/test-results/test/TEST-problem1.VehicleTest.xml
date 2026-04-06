@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem1.VehicleTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-02-05T04:16:52" hostname="MacBook-Air.local" time="0.11">
+  <properties/>
+  <testcase name="setOwnerPhoneNumber()" classname="problem1.VehicleTest" time="0.09"/>
+  <testcase name="getVIN()" classname="problem1.VehicleTest" time="0.001"/>
+  <testcase name="getLicensePlate()" classname="problem1.VehicleTest" time="0.001"/>
+  <testcase name="setVIN()" classname="problem1.VehicleTest" time="0.0"/>
+  <testcase name="getOwnerLastName()" classname="problem1.VehicleTest" time="0.0"/>
+  <testcase name="setOwnerFirstName()" classname="problem1.VehicleTest" time="0.001"/>
+  <testcase name="getOwnerPhoneNumber()" classname="problem1.VehicleTest" time="0.0"/>
+  <testcase name="setLicensePlate()" classname="problem1.VehicleTest" time="0.002"/>
+  <testcase name="getOwnerFirstName()" classname="problem1.VehicleTest" time="0.0"/>
+  <testcase name="setOwnerLastName()" classname="problem1.VehicleTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

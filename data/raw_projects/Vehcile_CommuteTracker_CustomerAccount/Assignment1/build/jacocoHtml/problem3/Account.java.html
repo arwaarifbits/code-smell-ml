@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Account.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment1</a> &gt; <a href="index.source.html" class="el_package">problem3</a> &gt; <span class="el_source">Account.java</span></div><h1>Account.java</h1><pre class="source lang-java linenums">package problem3;
+
+/**
+ * Account is a simple object that has firstName and lastName and amount
+ */
+public class Account {
+
+  private String firstName;
+  private String lastName;
+  private Amount amount;
+
+  /**
+   * Constructor that creates a new account object with the specified firstName and lastName
+   *
+   * @param firstName - firstName of the new account object.
+   * @param lastName  - lastName of the new account object.
+   * @param amount    - amount of the new account object
+   */
+<span class="fc" id="L19">  public Account(final String firstName, final String lastName, final Amount amount) {</span>
+<span class="fc" id="L20">    this.firstName = firstName;</span>
+<span class="fc" id="L21">    this.lastName = lastName;</span>
+<span class="fc" id="L22">    this.amount = amount;</span>
+<span class="fc" id="L23">  }</span>
+
+  /**
+   * Returns the firstName of the account.
+   *
+   * @return the firstName of the account.
+   */
+  public String getFirstName() {
+<span class="fc" id="L31">    return firstName;</span>
+  }
+
+  /**
+   * Returns the lastName of the account.
+   *
+   * @return the lastName of the account.
+   */
+  public String getLastName() {
+<span class="fc" id="L40">    return lastName;</span>
+  }
+
+  /**
+   * Returns the balance amount of the account.
+   *
+   * @return the balance amount of the account.
+   */
+  public Amount getAmount() {
+<span class="fc" id="L49">    return amount;</span>
+  }
+
+  /**
+   * Sets the firstName of the account.
+   *
+   * @param firstName - firstName of the new account object.
+   */
+  public void setFirstName(final String firstName) {
+<span class="fc" id="L58">    this.firstName = firstName;</span>
+<span class="fc" id="L59">  }</span>
+
+  /**
+   * Sets lastName of the account.
+   *
+   * @param lastName - lastName of the new account object.
+   */
+  public void setLastName(final String lastName) {
+<span class="fc" id="L67">    this.lastName = lastName;</span>
+<span class="fc" id="L68">  }</span>
+
+  /**
+   * Deposit amount of money into account Return the updated balance of the account after
+   * depositing
+   *
+   * @param amount - amount of money to deposit in
+   * @return the updated balance of the account after depositing
+   */
+  public Account deposit(Amount amount) {
+<span class="fc" id="L78">    Amount updatedAmount = amount.addAmount(this.amount, amount);</span>
+<span class="fc" id="L79">    return new Account(this.firstName, this.lastName, updatedAmount);</span>
+  }
+
+  /**
+   * Withdraw amount of money from account Return the updated balance of the account after
+   * withdrawing
+   *
+   * @param amount - amount of money to withdraw
+   * @return the updated balance of the account after withdrawing
+   */
+  public Account withdraw(Amount amount) {
+<span class="fc" id="L90">    Amount updatedAmount = amount.minusAmount(this.amount, amount);</span>
+<span class="fc" id="L91">    return new Account(this.firstName, this.lastName, updatedAmount);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

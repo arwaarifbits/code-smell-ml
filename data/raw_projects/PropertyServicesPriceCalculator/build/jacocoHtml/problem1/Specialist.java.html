@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Specialist.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment3</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">Specialist.java</span></div><h1>Specialist.java</h1><pre class="source lang-java linenums">package problem1;
+
+import java.util.Objects;
+
+/**
+ * This is an abstract Specialist class which is the subclass of the AbstractService with two
+ * additional field numberOfLicensed and isComplex Represent the Specialist Service.
+ */
+public abstract class Specialist extends AbstractService {
+
+  private Integer numberOfLicensed;
+  private boolean isComplex;
+<span class="fc" id="L13">  private final static Integer MIN_LICENSED = 1;</span>
+<span class="fc" id="L14">  private final static Integer MIN_COMPLEX_SMALL_MEDIUM_LICENSED = 2;</span>
+<span class="fc" id="L15">  private final static Integer MIN_COMPLEX_LARGE_LICENSED = 3;</span>
+<span class="fc" id="L16">  private final static Integer BASE = 200;</span>
+
+  /**
+   * Constructor for Specialist with propertyAddress, propertySize, carriedOutMonthly,
+   * numberOfLicensed and isComplex
+   *
+   * @param propertyAddress   - the property address, represented as a String
+   * @param propertySize      - the property size, represented as an enum
+   * @param carriedOutMonthly - whether the service is carried out monthly, represented as boolean
+   * @param numberOfServices  - The number of services previously carried out at the address,
+   *                          represented as an Integer
+   * @param numberOfLicensed  - the number of licensed workers, represented as Integer
+   * @param isComplex         - whether the service is complex, represented as boolean
+   * @throws InvalidNumberOfLicensedException when number of licensed workers out of range
+   */
+  public Specialist(String propertyAddress, PropertySize propertySize, boolean carriedOutMonthly,
+      int numberOfServices, int numberOfLicensed, boolean isComplex)
+      throws InvalidNumberOfLicensedException {
+<span class="fc" id="L34">    super(propertyAddress, propertySize, carriedOutMonthly, numberOfServices);</span>
+<span class="fc" id="L35">    this.isComplex = isComplex;</span>
+<span class="fc" id="L36">    this.numberOfLicensed = this.isValidLicensed(numberOfLicensed);</span>
+<span class="fc" id="L37">  }</span>
+
+  /**
+   * Get the minimum licensed workers requirement based on isComplex and propertySize. All
+   * specialist services require at least one licensed employee. Complex work requires at least 2
+   * employees if the house is small or medium size, and at least 3 if the house is large.
+   *
+   * @return minimum licensed workers, Integer
+   */
+  private Integer getMinLicensedRequirement() {
+<span class="fc bfc" id="L47" title="All 2 branches covered.">    if (this.isComplex == true) {</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">      if (this.getPropertySize() == PropertySize.LARGE) {</span>
+<span class="fc" id="L49">        return MIN_COMPLEX_LARGE_LICENSED;</span>
+      }
+<span class="fc" id="L51">      return MIN_COMPLEX_SMALL_MEDIUM_LICENSED;</span>
+    }
+<span class="fc" id="L53">    return MIN_LICENSED;</span>
+  }
+
+  /**
+   * Check whether the given number of licensed worker is valid If a new complex specialist service
+   * is created that not meet these minimum requirements, increase the number of licensed workers to
+   * meet the requirement.
+   *
+   * @param numberOfLicensed - the number of licensed worker
+   * @return valid numberOfLicensed, integer
+   * @throws InvalidNumberOfLicensedException when number of licensed workers out of range
+   */
+  protected Integer isValidLicensed(int numberOfLicensed) throws InvalidNumberOfLicensedException {
+<span class="fc bfc" id="L66" title="All 2 branches covered.">    if (numberOfLicensed &lt; this.getMinLicensedRequirement()) {</span>
+<span class="fc" id="L67">      return this.getMinLicensedRequirement();</span>
+    }
+<span class="fc" id="L69">    return numberOfLicensed;</span>
+  }
+
+  /**
+   * Calculate the base fee based on the base price per licensed worker and the number of licensed
+   * worker
+   *
+   * @return the calculated base fee, double
+   */
+  @Override
+  public double calculateBaseFee() {
+<span class="fc" id="L80">    return BASE * this.numberOfLicensed;</span>
+  }
+
+  /**
+   * Calculate the discount fee. All the specialist services do not have discount
+   *
+   * @return zero, double
+   */
+  @Override
+  public double calculateDiscountFee() {
+<span class="fc" id="L90">    return 0;</span>
+  }
+
+  /**
+   * Return the number of licensed workers
+   *
+   * @return numberOfLicensed, integer
+   */
+  public Integer getNumberOfLicensed() {
+<span class="nc" id="L99">    return this.numberOfLicensed;</span>
+  }
+
+  /**
+   * Return whether the service is complex
+   *
+   * @return isComplex, boolean
+   */
+  public boolean isComplex() {
+<span class="nc" id="L108">    return this.isComplex;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L116" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L117">      return true;</span>
+    }
+<span class="pc bpc" id="L119" title="1 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L120">      return false;</span>
+    }
+<span class="fc bfc" id="L122" title="All 2 branches covered.">    if (!super.equals(o)) {</span>
+<span class="fc" id="L123">      return false;</span>
+    }
+<span class="fc" id="L125">    Specialist that = (Specialist) o;</span>
+<span class="pc bpc" id="L126" title="2 of 4 branches missed.">    return isComplex == that.isComplex &amp;&amp; numberOfLicensed.equals(that.numberOfLicensed);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L134">    return Objects.hash(super.hashCode(), numberOfLicensed, isComplex);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L142">    return super.toString() +</span>
+        &quot;numberOfLicensed=&quot; + numberOfLicensed +
+        &quot;, isComplex=&quot; + isComplex;
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

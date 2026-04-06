@@ -1,0 +1,14 @@
+project video
+https://youtu.be/ydSJrHUhbOw?si=16zVioa3mFkyUt9W
+
+interview dsa problems
+https://instabyte.io/p/interview-master-100
+
+algorithms with problems roadmap
+https://algomap.io/roadmap
+
+neetcode problems
+https://neetcode.io/roadmap
+
+3 month interview notion plan
+https://worried-spandex-ff2.notion.site/a5a3fde4f4ba4769a30092b662e17c6b?v=c9efc37401794c63a09eab337b955e40

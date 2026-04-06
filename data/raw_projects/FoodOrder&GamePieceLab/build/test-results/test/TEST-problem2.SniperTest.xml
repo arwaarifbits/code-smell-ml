@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem2.SniperTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-02-17T22:48:50" hostname="MacBook-Air.local" time="0.024">
+  <properties/>
+  <testcase name="negativeStamina()" classname="problem2.SniperTest" time="0.003"/>
+  <testcase name="invalidIncrease()" classname="problem2.SniperTest" time="0.002"/>
+  <testcase name="testToString()" classname="problem2.SniperTest" time="0.003"/>
+  <testcase name="invalidDecrease()" classname="problem2.SniperTest" time="0.001"/>
+  <testcase name="increase()" classname="problem2.SniperTest" time="0.0"/>
+  <testcase name="largeStamina()" classname="problem2.SniperTest" time="0.001"/>
+  <testcase name="decrease()" classname="problem2.SniperTest" time="0.003"/>
+  <testcase name="testHashCode()" classname="problem2.SniperTest" time="0.0"/>
+  <testcase name="testEquals()" classname="problem2.SniperTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Electrical.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment3</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">Electrical.java</span></div><h1>Electrical.java</h1><pre class="source lang-java linenums">package problem1;
+
+/**
+ * This is a Electrical class which is the subclass of the Specialist. Represent the Specialist
+ * Electrical Service.
+ */
+public class Electrical extends Specialist {
+
+  private final static double PERMITTING_FEE = 50.0;
+<span class="fc" id="L10">  private final static Integer MAX_LICENSED = 4;</span>
+
+  /**
+   * Constructor for the Electrical with propertyAddress, propertySize, carriedOutMonthly,
+   * numberOfLicensed and isComplex
+   *
+   * @param propertyAddress   - the property address, represented as a String
+   * @param propertySize      - the property size, represented as an enum
+   * @param carriedOutMonthly - whether the service is carried out monthly, represented as boolean
+   * @param numberOfServices  - The number of services previously carried out at the address,
+   *                          represented as an Integer
+   * @param numberOfLicensed  - the number of licensed workers, represented as Integer
+   * @param isComplex         - whether the service is complex, represented as boolean
+   * @throws InvalidNumberOfLicensedException when number of licensed workers out of range
+   */
+  public Electrical(String propertyAddress, PropertySize propertySize, boolean carriedOutMonthly,
+      int numberOfServices, int numberOfLicensed, boolean isComplex)
+      throws InvalidNumberOfLicensedException {
+<span class="fc" id="L28">    super(propertyAddress, propertySize, carriedOutMonthly, numberOfServices, numberOfLicensed,</span>
+        isComplex);
+<span class="fc" id="L30">  }</span>
+
+  /**
+   * Calculate the Extra Fee, a permitting fee of $50
+   *
+   * @return the calculated additional fee, double
+   */
+  @Override
+  public double calculateAdditionalFee() {
+<span class="fc" id="L39">    return PERMITTING_FEE;</span>
+  }
+
+  /**
+   * Check whether the number of licensed worker is valid, cannot exceed the maximum number of
+   * licensed employees.
+   *
+   * @param numberOfLicensed - the number of licensed worker
+   * @return the valid licensed worker
+   * @throws InvalidNumberOfLicensedException when number of licensed worker out of range
+   */
+  @Override
+  protected Integer isValidLicensed(int numberOfLicensed) throws InvalidNumberOfLicensedException {
+<span class="fc bfc" id="L52" title="All 2 branches covered.">    if (numberOfLicensed &gt; MAX_LICENSED) {</span>
+<span class="fc" id="L53">      throw new InvalidNumberOfLicensedException(&quot;Exceeds maximum number of 4 licensed employees!&quot;);</span>
+    }
+<span class="fc" id="L55">    return super.isValidLicensed(numberOfLicensed);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L63">    return &quot;Electrical:&quot; + super.toString();</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

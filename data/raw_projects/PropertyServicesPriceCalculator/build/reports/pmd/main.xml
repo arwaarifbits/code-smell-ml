@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.36.0" timestamp="2022-02-28T09:59:08.319">
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/AbstractService.java">
+<violation beginline="11" endline="11" begincolumn="18" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="problem1" class="AbstractService" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="12" endline="12" begincolumn="24" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="problem1" class="AbstractService" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="13" endline="13" begincolumn="19" endcolumn="35" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="problem1" class="AbstractService" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="15" endcolumn="30" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="problem1" class="AbstractService" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="16" endline="16" begincolumn="31" endcolumn="52" rule="LongVariable" ruleset="Code Style" package="problem1" class="AbstractService" variable="TENTH_SERVICE_DISCOUNT" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like TENTH_SERVICE_DISCOUNT
+</violation>
+<violation beginline="29" endline="29" begincolumn="26" endcolumn="47" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="AbstractService" method="AbstractService" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="29" endline="29" begincolumn="50" endcolumn="74" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="AbstractService" method="AbstractService" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="30" endline="30" begincolumn="7" endcolumn="31" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="AbstractService" method="AbstractService" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="31" endline="31" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="AbstractService" method="AbstractService" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+<violation beginline="96" endline="98" begincolumn="7" endcolumn="31" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="AbstractService" method="calculateDiscountFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="100" endline="102" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="AbstractService" method="calculateDiscountFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="111" endline="111" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="problem1" class="AbstractService" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="111" endline="111" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="AbstractService" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="113" endline="113" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="AbstractService" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="116" endline="116" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="AbstractService" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="118" endline="118" begincolumn="5" endcolumn="46" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="problem1" class="AbstractService" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'that' could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/Cleaning.java">
+<violation beginline="22" endline="22" begincolumn="70" endcolumn="94" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Cleaning" method="Cleaning" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="19" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Cleaning" method="Cleaning" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="43" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Cleaning" method="Cleaning" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="23" endline="23" begincolumn="29" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Cleaning" method="Cleaning" variable="numberOfPets" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfPets' is not assigned and could be declared final
+</violation>
+<violation beginline="23" endline="23" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Cleaning" method="Cleaning" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="7" endcolumn="31" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Cleaning" method="calculateBaseFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="39" endline="39" begincolumn="7" endcolumn="32" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Cleaning" method="calculateBaseFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/Electrical.java">
+<violation beginline="25" endline="25" begincolumn="72" endcolumn="96" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Electrical" method="Electrical" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="25" endline="25" begincolumn="21" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Electrical" method="Electrical" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="25" endline="25" begincolumn="45" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Electrical" method="Electrical" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="51" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Electrical" method="Electrical" variable="isComplex" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'isComplex' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="29" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Electrical" method="Electrical" variable="numberOfLicensed" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfLicensed' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Electrical" method="Electrical" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="37" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Electrical" method="isValidLicensed" variable="numberOfLicensed" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfLicensed' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/Exterior.java">
+<violation beginline="7" endline="46" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="problem1" class="Exterior" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="24" endline="24" begincolumn="70" endcolumn="94" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Exterior" method="Exterior" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="19" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Exterior" method="Exterior" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="43" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Exterior" method="Exterior" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="25" endline="25" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Exterior" method="Exterior" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+<violation beginline="39" endline="39" begincolumn="7" endcolumn="31" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Exterior" method="calculateBaseFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="41" endline="41" begincolumn="7" endcolumn="32" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Exterior" method="calculateBaseFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/Gardening.java">
+<violation beginline="21" endline="21" begincolumn="71" endcolumn="95" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Gardening" method="Gardening" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="20" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Gardening" method="Gardening" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="44" endcolumn="68" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Gardening" method="Gardening" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Gardening" method="Gardening" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/Interior.java">
+<violation beginline="9" endline="94" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="problem1" class="Interior" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="11" endline="11" begincolumn="19" endcolumn="30" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="problem1" class="Interior" variable="numberOfPets" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="32" endcolumn="50" rule="LongVariable" ruleset="Code Style" package="problem1" class="Interior" variable="EXTRA_FEE_THRESHOLD" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like EXTRA_FEE_THRESHOLD
+</violation>
+<violation beginline="15" endline="15" begincolumn="32" endcolumn="56" rule="LongVariable" ruleset="Code Style" package="problem1" class="Interior" variable="EXTRA_FEE_LARGE_THRESHOLD" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like EXTRA_FEE_LARGE_THRESHOLD
+</violation>
+<violation beginline="28" endline="28" begincolumn="70" endcolumn="94" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Interior" method="Interior" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="19" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Interior" method="Interior" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="43" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Interior" method="Interior" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="29" endline="29" begincolumn="29" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Interior" method="Interior" variable="numberOfPets" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfPets' is not assigned and could be declared final
+</violation>
+<violation beginline="29" endline="29" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Interior" method="Interior" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+<violation beginline="53" endline="53" begincolumn="7" endcolumn="86" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Interior" method="calculateAdditionalFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="55" endline="55" begincolumn="7" endcolumn="86" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Interior" method="calculateAdditionalFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="64" endline="64" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="problem1" class="Interior" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="64" endline="64" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Interior" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="66" endline="66" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Interior" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="69" endline="69" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Interior" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="72" endline="72" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Interior" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="74" endline="74" begincolumn="5" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="problem1" class="Interior" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'interior' could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/InvalidNumberOfFloorsException.java">
+<violation beginline="6" endline="16" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="problem1" class="InvalidNumberOfFloorsException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="13" endline="13" begincolumn="41" endcolumn="54" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="InvalidNumberOfFloorsException" method="InvalidNumberOfFloorsException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/InvalidNumberOfLicensedException.java">
+<violation beginline="6" endline="16" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="problem1" class="InvalidNumberOfLicensedException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="13" endline="13" begincolumn="43" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="InvalidNumberOfLicensedException" method="InvalidNumberOfLicensedException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/Painting.java">
+<violation beginline="24" endline="24" begincolumn="70" endcolumn="94" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Painting" method="Painting" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="19" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Painting" method="Painting" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="43" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Painting" method="Painting" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="25" endline="25" begincolumn="29" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Painting" method="Painting" variable="numberOfPets" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfPets' is not assigned and could be declared final
+</violation>
+<violation beginline="25" endline="25" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Painting" method="Painting" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+<violation beginline="39" endline="39" begincolumn="7" endcolumn="38" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Painting" method="calculateBaseFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/Plumbing.java">
+<violation beginline="21" endline="21" begincolumn="70" endcolumn="94" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Plumbing" method="Plumbing" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="19" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Plumbing" method="Plumbing" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="43" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Plumbing" method="Plumbing" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="51" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Plumbing" method="Plumbing" variable="isComplex" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'isComplex' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="29" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Plumbing" method="Plumbing" variable="numberOfLicensed" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfLicensed' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Plumbing" method="Plumbing" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/Specialist.java">
+<violation beginline="9" endline="146" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Code Style" package="problem1" class="Specialist" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#abstractnaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="11" endline="11" begincolumn="19" endcolumn="34" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="problem1" class="Specialist" variable="numberOfLicensed" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="12" endline="12" begincolumn="11" endcolumn="28" rule="AvoidFieldNameMatchingMethodName" ruleset="Error Prone" package="problem1" class="Specialist" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#avoidfieldnamematchingmethodname" priority="3">
+Field isComplex has the same name as a method
+</violation>
+<violation beginline="12" endline="12" begincolumn="19" endcolumn="27" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="problem1" class="Specialist" variable="isComplex" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="32" endcolumn="64" rule="LongVariable" ruleset="Code Style" package="problem1" class="Specialist" variable="MIN_COMPLEX_SMALL_MEDIUM_LICENSED" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like MIN_COMPLEX_SMALL_MEDIUM_LICENSED
+</violation>
+<violation beginline="15" endline="15" begincolumn="32" endcolumn="57" rule="LongVariable" ruleset="Code Style" package="problem1" class="Specialist" variable="MIN_COMPLEX_LARGE_LICENSED" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like MIN_COMPLEX_LARGE_LICENSED
+</violation>
+<violation beginline="31" endline="31" begincolumn="72" endcolumn="96" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="Specialist" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="31" endline="31" begincolumn="21" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="Specialist" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="31" endline="31" begincolumn="45" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="Specialist" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="32" endline="32" begincolumn="51" endcolumn="67" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="Specialist" variable="isComplex" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'isComplex' is not assigned and could be declared final
+</violation>
+<violation beginline="32" endline="32" begincolumn="29" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="Specialist" variable="numberOfLicensed" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfLicensed' is not assigned and could be declared final
+</violation>
+<violation beginline="32" endline="32" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="Specialist" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+<violation beginline="49" endline="49" begincolumn="9" endcolumn="42" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Specialist" method="getMinLicensedRequirement" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="51" endline="51" begincolumn="7" endcolumn="47" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Specialist" method="getMinLicensedRequirement" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="65" endline="70" begincolumn="13" endcolumn="3" rule="LinguisticNaming" ruleset="Code Style" package="problem1" class="Specialist" method="isValidLicensed" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#linguisticnaming" priority="3">
+Linguistics Antipattern - The method 'isValidLicensed' indicates linguistically it returns a boolean, but it returns 'Integer'
+</violation>
+<violation beginline="65" endline="65" begincolumn="37" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="isValidLicensed" variable="numberOfLicensed" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfLicensed' is not assigned and could be declared final
+</violation>
+<violation beginline="67" endline="67" begincolumn="7" endcolumn="46" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Specialist" method="isValidLicensed" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="89" endline="91" begincolumn="10" endcolumn="3" rule="EmptyMethodInAbstractClassShouldBeAbstract" ruleset="Code Style" package="problem1" class="Specialist" method="calculateDiscountFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#emptymethodinabstractclassshouldbeabstract" priority="1">
+An empty method in an abstract class should be abstract instead
+</violation>
+<violation beginline="115" endline="115" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="problem1" class="Specialist" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="115" endline="115" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="117" endline="117" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Specialist" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="120" endline="120" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Specialist" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="123" endline="123" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="Specialist" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="125" endline="125" begincolumn="5" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="problem1" class="Specialist" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'that' could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment3/src/main/java/problem1/WindowCleaning.java">
+<violation beginline="12" endline="12" begincolumn="19" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="problem1" class="WindowCleaning" variable="numberOfFloors" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="32" endcolumn="50" rule="LongVariable" ruleset="Code Style" package="problem1" class="WindowCleaning" variable="EXTRA_FEE_THRESHOLD" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like EXTRA_FEE_THRESHOLD
+</violation>
+<violation beginline="29" endline="29" begincolumn="25" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="WindowCleaning" method="WindowCleaning" variable="propertyAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertyAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="29" endline="29" begincolumn="49" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="WindowCleaning" method="WindowCleaning" variable="propertySize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'propertySize' is not assigned and could be declared final
+</violation>
+<violation beginline="30" endline="30" begincolumn="7" endcolumn="31" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="WindowCleaning" method="WindowCleaning" variable="carriedOutMonthly" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'carriedOutMonthly' is not assigned and could be declared final
+</violation>
+<violation beginline="31" endline="31" begincolumn="29" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="WindowCleaning" method="WindowCleaning" variable="numberOfFloors" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfFloors' is not assigned and could be declared final
+</violation>
+<violation beginline="31" endline="31" begincolumn="7" endcolumn="26" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="WindowCleaning" method="WindowCleaning" variable="numberOfServices" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfServices' is not assigned and could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="29" endcolumn="46" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="WindowCleaning" method="isValidFloor" variable="numberOfFloors" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numberOfFloors' is not assigned and could be declared final
+</violation>
+<violation beginline="59" endline="59" begincolumn="7" endcolumn="80" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="WindowCleaning" method="calculateAdditionalFee" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="77" endline="77" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="problem1" class="WindowCleaning" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="77" endline="77" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="problem1" class="WindowCleaning" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="79" endline="79" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="WindowCleaning" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="82" endline="82" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="WindowCleaning" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="85" endline="85" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="problem1" class="WindowCleaning" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="87" endline="87" begincolumn="5" endcolumn="44" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="problem1" class="WindowCleaning" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'that' could be declared final
+</violation>
+</file>
+</pmd>

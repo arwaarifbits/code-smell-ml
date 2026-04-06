@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.36.0" timestamp="2022-02-18T18:58:46.586">
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem1/DoubleRoom.java">
+<violation beginline="14" endline="14" begincolumn="21" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="DoubleRoom" method="DoubleRoom" variable="price" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'price' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem1/FamilyRoom.java">
+<violation beginline="14" endline="14" begincolumn="21" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="FamilyRoom" method="FamilyRoom" variable="price" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'price' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem1/InvalidGuestNumberException.java">
+<violation beginline="6" endline="14" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="assignment2.problem1" class="InvalidGuestNumberException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="11" endline="11" begincolumn="38" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="InvalidGuestNumberException" method="InvalidGuestNumberException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem1/InvalidPriceException.java">
+<violation beginline="5" endline="13" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="assignment2.problem1" class="InvalidPriceException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="10" endline="10" begincolumn="32" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="InvalidPriceException" method="InvalidPriceException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem1/InvalidRoomException.java">
+<violation beginline="5" endline="13" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="assignment2.problem1" class="InvalidRoomException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="10" endline="10" begincolumn="31" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="InvalidRoomException" method="InvalidRoomException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem1/Room.java">
+<violation beginline="9" endline="159" begincolumn="8" endcolumn="1" rule="ShortClassName" ruleset="Code Style" package="assignment2.problem1" class="Room" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortclassname" priority="4">
+Avoid short class names like Room
+</violation>
+<violation beginline="11" endline="11" begincolumn="19" endcolumn="30" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem1" class="Room" variable="maxOccupancy" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="12" endline="12" begincolumn="18" endcolumn="22" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem1" class="Room" variable="price" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="13" endline="13" begincolumn="19" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem1" class="Room" variable="guestNumber" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="24" endline="24" begincolumn="15" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="Room" method="Room" variable="maxOccupancy" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'maxOccupancy' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="37" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="Room" method="Room" variable="price" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'price' is not assigned and could be declared final
+</violation>
+<violation beginline="40" endline="40" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem1" class="Room" method="isAvailable" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="52" endline="52" begincolumn="29" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="Room" method="isValidGuest" variable="guests" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'guests' is not assigned and could be declared final
+</violation>
+<violation beginline="66" endline="66" begincolumn="29" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="Room" method="isValidPrice" variable="price" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'price' is not assigned and could be declared final
+</violation>
+<violation beginline="91" endline="91" begincolumn="24" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="Room" method="bookRoom" variable="guests" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'guests' is not assigned and could be declared final
+</violation>
+<violation beginline="128" endline="128" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="assignment2.problem1" class="Room" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="128" endline="128" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="Room" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="130" endline="130" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem1" class="Room" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="133" endline="133" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem1" class="Room" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="135" endline="135" begincolumn="5" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="Room" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'room' could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem1/SingleRoom.java">
+<violation beginline="15" endline="15" begincolumn="21" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem1" class="SingleRoom" method="SingleRoom" variable="price" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'price' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem2/EmptyException.java">
+<violation beginline="6" endline="16" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="assignment2.problem2" class="EmptyException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="13" endline="13" begincolumn="25" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="EmptyException" method="EmptyException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem2/ExceedsSizeException.java">
+<violation beginline="6" endline="16" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="assignment2.problem2" class="ExceedsSizeException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="13" endline="13" begincolumn="31" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="ExceedsSizeException" method="ExceedsSizeException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem2/InvalidSizeException.java">
+<violation beginline="6" endline="16" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="assignment2.problem2" class="InvalidSizeException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="13" endline="13" begincolumn="31" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="InvalidSizeException" method="InvalidSizeException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem2/Locker.java">
+<violation beginline="11" endline="11" begincolumn="19" endcolumn="26" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="Locker" variable="maxWidth" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="12" endline="12" begincolumn="19" endcolumn="27" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="Locker" variable="maxHeight" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="13" endline="13" begincolumn="19" endcolumn="26" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="Locker" variable="maxDepth" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="20" endcolumn="27" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="Locker" variable="mailItem" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="26" endline="26" begincolumn="54" endcolumn="69" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="Locker" variable="maxDepth" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'maxDepth' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="35" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="Locker" variable="maxHeight" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'maxHeight' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="17" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="Locker" variable="maxWidth" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'maxWidth' is not assigned and could be declared final
+</violation>
+<violation beginline="33" endline="33" begincolumn="21" endcolumn="24" rule="NullAssignment" ruleset="Error Prone" package="assignment2.problem2" class="Locker" method="Locker" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="42" endline="42" begincolumn="31" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="isValidMaxSize" variable="maxSize" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'maxSize' is not assigned and could be declared final
+</violation>
+<violation beginline="65" endline="65" begincolumn="28" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="isValidMail" variable="mail" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'mail' is not assigned and could be declared final
+</violation>
+<violation beginline="66" endline="66" begincolumn="5" endcolumn="35" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="isValidMail" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'width' could be declared final
+</violation>
+<violation beginline="67" endline="67" begincolumn="5" endcolumn="37" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="isValidMail" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'height' could be declared final
+</violation>
+<violation beginline="68" endline="68" begincolumn="5" endcolumn="35" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="isValidMail" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'depth' could be declared final
+</violation>
+<violation beginline="81" endline="81" begincolumn="23" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="addMail" variable="mail" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'mail' is not assigned and could be declared final
+</violation>
+<violation beginline="104" endline="104" begincolumn="33" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="isValidRecipient" variable="recipient" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'recipient' is not assigned and could be declared final
+</violation>
+<violation beginline="118" endline="118" begincolumn="30" endcolumn="48" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="pickupMail" variable="recipient" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'recipient' is not assigned and could be declared final
+</violation>
+<violation beginline="121" endline="121" begincolumn="5" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="pickupMail" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'pickedMail' could be declared final
+</violation>
+<violation beginline="122" endline="122" begincolumn="21" endcolumn="24" rule="NullAssignment" ruleset="Error Prone" package="assignment2.problem2" class="Locker" method="pickupMail" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#nullassignment" priority="3">
+Assigning an Object to null is a code smell.  Consider refactoring.
+</violation>
+<violation beginline="167" endline="167" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="167" endline="167" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="169" endline="169" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="172" endline="172" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="174" endline="174" begincolumn="5" endcolumn="30" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Locker" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'locker' could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem2/MailItem.java">
+<violation beginline="11" endline="11" begincolumn="19" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="MailItem" variable="width" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="12" endline="12" begincolumn="19" endcolumn="24" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="MailItem" variable="height" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="13" endline="13" begincolumn="19" endcolumn="23" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="MailItem" variable="depth" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="14" endline="14" begincolumn="21" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="MailItem" variable="recipient" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="26" endline="26" begincolumn="50" endcolumn="62" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="MailItem" variable="depth" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'depth' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="34" endcolumn="47" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="MailItem" variable="height" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'height' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="65" endcolumn="83" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="MailItem" variable="recipient" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'recipient' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="19" endcolumn="31" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="MailItem" variable="width" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'width' is not assigned and could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="28" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="isValidSize" variable="size" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'size' is not assigned and could be declared final
+</violation>
+<violation beginline="89" endline="89" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="89" endline="89" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="91" endline="91" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="94" endline="94" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="96" endline="96" begincolumn="5" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="MailItem" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'mailItem' could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem2/MismatchException.java">
+<violation beginline="6" endline="16" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="assignment2.problem2" class="MismatchException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="13" endline="13" begincolumn="28" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="MismatchException" method="MismatchException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem2/OccupiedException.java">
+<violation beginline="6" endline="16" begincolumn="8" endcolumn="1" rule="MissingSerialVersionUID" ruleset="Error Prone" package="assignment2.problem2" class="OccupiedException" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#missingserialversionuid" priority="3">
+Classes implementing Serializable should set a serialVersionUID
+</violation>
+<violation beginline="13" endline="13" begincolumn="28" endcolumn="41" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="OccupiedException" method="OccupiedException" variable="message" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'message' is not assigned and could be declared final
+</violation>
+</file>
+<file name="/Users/yiming/Assignment2/src/main/java/assignment2/problem2/Recipient.java">
+<violation beginline="11" endline="11" begincolumn="18" endcolumn="26" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="Recipient" variable="firstName" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="12" endline="12" begincolumn="18" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="Recipient" variable="lastName" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="13" endline="13" begincolumn="18" endcolumn="29" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="assignment2.problem2" class="Recipient" variable="emailAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="22" endline="22" begincolumn="55" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Recipient" method="Recipient" variable="emailAddress" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'emailAddress' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="20" endcolumn="35" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Recipient" method="Recipient" variable="firstName" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'firstName' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="38" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Recipient" method="Recipient" variable="lastName" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'lastName' is not assigned and could be declared final
+</violation>
+<violation beginline="59" endline="59" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="assignment2.problem2" class="Recipient" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="59" endline="59" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Recipient" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="61" endline="61" begincolumn="7" endcolumn="18" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem2" class="Recipient" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="64" endline="64" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="assignment2.problem2" class="Recipient" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="66" endline="66" begincolumn="5" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="assignment2.problem2" class="Recipient" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.36.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'recipient' could be declared final
+</violation>
+</file>
+</pmd>

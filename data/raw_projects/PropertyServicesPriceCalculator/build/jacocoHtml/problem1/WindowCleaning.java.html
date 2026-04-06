@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>WindowCleaning.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment3</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">WindowCleaning.java</span></div><h1>WindowCleaning.java</h1><pre class="source lang-java linenums">package problem1;
+
+import java.util.Objects;
+
+/**
+ * This is a WindowCleaning class which is the subclass of the Exterior with one additional field
+ * numberOfFloors.
+ * Represent the Exterior Window Cleaning Service.
+ */
+public class WindowCleaning extends Exterior {
+
+  private Integer numberOfFloors;
+<span class="fc" id="L13">  private final static Integer MAX = 3;</span>
+<span class="fc" id="L14">  private final static Integer EXTRA_FEE_THRESHOLD = 1;</span>
+<span class="fc" id="L15">  private final static Double EXTRA_RATE = 0.05;</span>
+
+  /**
+   * Constructor for Window Cleaning with propertyAddress, propertySize, carriedOutMonthly and
+   * numberOfServices
+   *
+   * @param propertyAddress   - the property address, represented as a String
+   * @param propertySize      - the property size, represented as an enum
+   * @param carriedOutMonthly - whether the service is carried out monthly, represented as boolean
+   * @param numberOfServices  - The number of services previously carried out at the address,
+   *                          represented as an Integer
+   * @param numberOfFloors    - The number of floors, represented as Integer
+   * @throws InvalidNumberOfFloorsException when the number of floors out of range
+   */
+  public WindowCleaning(String propertyAddress, PropertySize propertySize,
+      boolean carriedOutMonthly,
+      int numberOfServices, int numberOfFloors) throws InvalidNumberOfFloorsException {
+<span class="fc" id="L32">    super(propertyAddress, propertySize, carriedOutMonthly, numberOfServices);</span>
+<span class="fc" id="L33">    this.isValidFloor(numberOfFloors);</span>
+<span class="fc" id="L34">    this.numberOfFloors = numberOfFloors;</span>
+<span class="fc" id="L35">  }</span>
+
+  /**
+   * Check whether the given number of floors out of the maximum range
+   *
+   * @param numberOfFloors - the number of floors, integer
+   * @throws InvalidNumberOfFloorsException when number of floors out of the maximum range
+   */
+  private void isValidFloor(int numberOfFloors) throws InvalidNumberOfFloorsException {
+<span class="fc bfc" id="L44" title="All 2 branches covered.">    if (numberOfFloors &gt; MAX) {</span>
+<span class="fc" id="L45">      throw new InvalidNumberOfFloorsException(&quot;The maximum number of floors &quot;</span>
+          + &quot;that the company can work with is 3 !&quot;);
+    }
+<span class="fc" id="L48">  }</span>
+
+  /**
+   * Calculate the extra fee based on the extra rate and the extra fee threshold. A 5% fee is added
+   * to the price if the property has more than one floor.
+   *
+   * @return calculated two decimal rounded addition fee, double
+   */
+  @Override
+  public double calculateAdditionalFee() {
+<span class="fc bfc" id="L58" title="All 2 branches covered.">    if (this.numberOfFloors &gt; EXTRA_FEE_THRESHOLD) {</span>
+<span class="fc" id="L59">      return Math.round((this.calculateBaseFee() * EXTRA_RATE) * 100.0) / 100.0;</span>
+    }
+<span class="fc" id="L61">    return 0;</span>
+  }
+
+  /**
+   * Return the number of floors
+   *
+   * @return numberOfFloors, integer
+   */
+  public Integer getNumberOfFloors() {
+<span class="fc" id="L70">    return this.numberOfFloors;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L78" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L79">      return true;</span>
+    }
+<span class="pc bpc" id="L81" title="1 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L82">      return false;</span>
+    }
+<span class="fc bfc" id="L84" title="All 2 branches covered.">    if (!super.equals(o)) {</span>
+<span class="fc" id="L85">      return false;</span>
+    }
+<span class="fc" id="L87">    WindowCleaning that = (WindowCleaning) o;</span>
+<span class="fc" id="L88">    return numberOfFloors.equals(that.numberOfFloors);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L96">    return Objects.hash(super.hashCode(), numberOfFloors);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L104">    return &quot;WindowCleaning:&quot; + super.toString() +</span>
+        &quot;numberOfFloors=&quot; + numberOfFloors;
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

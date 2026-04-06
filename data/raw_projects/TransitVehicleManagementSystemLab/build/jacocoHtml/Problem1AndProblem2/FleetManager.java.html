@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FleetManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab06</a> &gt; <a href="index.source.html" class="el_package">Problem1AndProblem2</a> &gt; <span class="el_source">FleetManager.java</span></div><h1>FleetManager.java</h1><pre class="source lang-java linenums">package Problem1AndProblem2;
+
+/**
+ * This is FleetManager Class. Represent a fleet manager.
+ */
+public class FleetManager {
+  private final static float UNABLE_TO_FINISH = -1F;
+  /**
+   * Constructor for FleetManager
+   */
+<span class="fc" id="L11">  public FleetManager() {</span>
+<span class="fc" id="L12">  }</span>
+
+  /**
+   * To populate the fields of a TripReport. Get the vehicle’s average speed,
+   * and calculate the trip duration as distance divided by speed.
+   *
+   * @param vehicle - the Vehicle that took the trip, Vehicle class
+   * @param distance - distance traveled in miles, a Float
+   * @return a new TripReport with vehicle, avgSpeed, distance and calculated duration
+   */
+  TripReport drive(Vehicle vehicle, float distance){
+<span class="fc" id="L23">    Float speed = vehicle.getAvgSpeed();</span>
+<span class="fc" id="L24">    Integer duration = Math.round(distance / speed);</span>
+<span class="fc" id="L25">    return new TripReport(vehicle, speed, distance, duration);</span>
+  }
+
+  /**
+   * To populate the fields of a TripReport. Get the vehicle’s average speed,
+   * and calculate the trip distance as speed times duration.
+   * @param vehicle - the Vehicle that took the trip, Vehicle class
+   * @param duration - Trip duration in minutes, an Integer
+   * @return a new TripReport with vehicle, avgSpeed, calculated distance and duration
+   */
+  TripReport drive(Vehicle vehicle, int duration){
+<span class="fc" id="L36">    Float speed = vehicle.getAvgSpeed();</span>
+<span class="fc" id="L37">    Float distance = speed * duration;</span>
+<span class="fc" id="L38">    return new TripReport(vehicle, speed, distance, duration);</span>
+  }
+
+  /**
+   * To populate the fields of a TripReport. Get the vehicle’s max speed,
+   * and check the given speed is valid, if given speed is smaller than or equal to max speed,
+   * use given speed, if given speed is larger than max, use the max speed,
+   * calculated the duration based on the speed and given distance.
+   *
+   * @param vehicle - the Vehicle that took the trip, Vehicle class
+   * @param speed - given speed in miles per minute, a Float
+   * @param distance - given distance traveled in miles, a Float
+   * @return a new TripReport with vehicle, valid speed, distance and calculated duration
+   */
+  TripReport drive(Vehicle vehicle, float speed, float distance){
+<span class="fc" id="L53">    Float max = vehicle.getMaxSpeed();</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">    if (max &gt; speed){</span>
+<span class="fc" id="L55">      int duration = Math.round(distance / speed);</span>
+<span class="fc" id="L56">      return new TripReport(vehicle,speed,distance,duration);</span>
+    }
+<span class="fc" id="L58">    int duration = Math.round(distance / max);</span>
+<span class="fc" id="L59">    return new TripReport(vehicle,max,distance,duration);</span>
+  }
+
+  /**
+   * To populate the fields of a TripReport. Get the vehicle’s max speed,
+   * use given distance and duration to calculate the requiring speed.
+   * Check the calculated speed is valid, if speed is smaller than and equal to max speed,
+   * use calculated speed, if speed is larger than max, set speed to -1 which means unable to
+   * finish the distance in given duration.
+   *
+   * @param vehicle - the Vehicle that took the trip, Vehicle class
+   * @param distance - given distance traveled in miles, a Float
+   * @param duration - Trip duration in minutes, an Integer
+   * @return a new TripReport with vehicle, calculated speed, distance and duration
+   */
+  TripReport drive(Vehicle vehicle, float distance, int duration){
+<span class="fc" id="L75">    Float max = vehicle.getMaxSpeed();</span>
+<span class="fc" id="L76">    Float speed = distance / duration;</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">    if (speed &gt; max){</span>
+<span class="fc" id="L78">      return new TripReport(vehicle, UNABLE_TO_FINISH, distance, duration);</span>
+    }
+<span class="fc" id="L80">    return new TripReport(vehicle, speed, distance, duration);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

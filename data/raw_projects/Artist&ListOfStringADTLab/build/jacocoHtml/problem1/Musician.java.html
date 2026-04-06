@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Musician.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab05</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">Musician.java</span></div><h1>Musician.java</h1><pre class="source lang-java linenums">package problem1;
+
+import java.util.Objects;
+
+/**
+ * This is Musician class and subclass of AbstractArtist. Represent Musician with two more fields,
+ * recordCompany and recordAlbum
+ */
+public class Musician extends AbstractArtist{
+  private String recordCompany;
+  private String recordAlbum;
+  /**
+   * Constructor for Musician, Represent musician with two more fields,
+   * recordCompany and recordAlbum
+   *
+   * @param name       - Name, name class
+   * @param age        - age, integer
+   * @param genres     - genres, string array
+   * @param award      - all award, string array
+   * @param recordCompany   - a Musician’s recording company, string
+   * @param recordAlbum  -  the title of the latest recorded album, string
+   * @throws InvalidAgeException when age out of range
+   */
+  public Musician(Name name, Integer age, String[] genres, String[] award,
+      String recordCompany, String recordAlbum) throws InvalidAgeException {
+<span class="fc" id="L26">    super(name, age, genres, award);</span>
+<span class="fc" id="L27">    this.recordCompany = recordCompany;</span>
+<span class="fc" id="L28">    this.recordAlbum = recordAlbum;</span>
+<span class="fc" id="L29">  }</span>
+
+  /**
+   * add the award to their current array of awards,
+   * @param award - the award that will be added
+   * @return A copy Musician object with updated array of awards.
+   */
+  @Override
+  public Musician receiveAward(String award) throws InvalidAgeException {
+<span class="fc" id="L38">    int originalAwardLength = this.getAward().length;</span>
+<span class="fc" id="L39">    String[] newAwardList = new String[originalAwardLength + 1];</span>
+<span class="fc" id="L40">    System.arraycopy(this.getAward(), 0, newAwardList,0, originalAwardLength);</span>
+<span class="fc" id="L41">    newAwardList[newAwardList.length-1] = award;</span>
+<span class="fc" id="L42">    return new Musician(this.getName(),this.getAge(),this.getGenres(),newAwardList,this.recordCompany, this.recordAlbum);</span>
+  }
+
+  /**
+   * Return a Musician’s recording company, string
+   * @return recordCompany
+   */
+  public String getRecordCompany() {
+<span class="fc" id="L50">    return this.recordCompany;</span>
+  }
+
+  /**
+   * Return the title of the latest recorded album, string
+   * @return recordAlbum
+   */
+  public String getRecordAlbum() {
+<span class="fc" id="L58">    return this.recordAlbum;</span>
+  }
+
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="nc bnc" id="L67" title="All 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L68">      return true;</span>
+    }
+<span class="nc bnc" id="L70" title="All 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L71">      return false;</span>
+    }
+<span class="nc bnc" id="L73" title="All 2 branches missed.">    if (!super.equals(o)) {</span>
+<span class="nc" id="L74">      return false;</span>
+    }
+<span class="nc" id="L76">    Musician musician = (Musician) o;</span>
+<span class="nc bnc" id="L77" title="All 4 branches missed.">    return recordCompany.equals(musician.recordCompany) &amp;&amp; recordAlbum.equals(musician.recordAlbum);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="nc" id="L85">    return Objects.hash(super.hashCode(), recordCompany, recordAlbum);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="nc" id="L93">    return &quot;Musician{&quot; +</span>
+        &quot;recordCompany='&quot; + recordCompany + '\'' +
+        &quot;, recordAlbum='&quot; + recordAlbum + '\'' +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

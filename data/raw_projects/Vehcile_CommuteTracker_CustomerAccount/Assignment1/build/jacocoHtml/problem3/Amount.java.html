@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Amount.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment1</a> &gt; <a href="index.source.html" class="el_package">problem3</a> &gt; <span class="el_source">Amount.java</span></div><h1>Amount.java</h1><pre class="source lang-java linenums">package problem3;
+
+/**
+ * Amount is a simple object that has dollarAmount, centsAmount
+ */
+public class Amount {
+
+  private Integer dollarAmount;
+  private Integer centsAmount;
+  /**
+   * DOLLAR_TO_CENT  100 CENTS TO DOLLAR
+   */
+  public static final int DOLLAR_TO_CENT = 100;
+
+  /**
+   * Constructor that creates a new amount object with the specified dollarAmount, centAmount
+   *
+   * @param dollarAmount - dollarAmount of the new amount object.
+   * @param centsAmount  - centsAmount of the new amount object.
+   */
+<span class="fc" id="L21">  public Amount(final int dollarAmount, final int centsAmount) {</span>
+<span class="fc" id="L22">    this.dollarAmount = dollarAmount;</span>
+<span class="fc" id="L23">    this.centsAmount = centsAmount;</span>
+<span class="fc" id="L24">  }</span>
+
+  /**
+   * Returns the dollarAmount of the amount.
+   *
+   * @return the dollarAmount of the amount.
+   */
+  public Integer getDollarAmount() {
+<span class="fc" id="L32">    return dollarAmount;</span>
+  }
+
+  /**
+   * Returns the centsAmount of the amount.
+   *
+   * @return the centsAmount of the amount.
+   */
+  public Integer getCentsAmount() {
+<span class="fc" id="L41">    return centsAmount;</span>
+  }
+
+  /**
+   * Method addAmount Return the amount object after depositing another amount object.
+   *
+   * @param oriAmount   - the original amount object
+   * @param addedAmount - the added amount object
+   * @return the amount object after depositing another amount object to original amount.
+   */
+  public Amount addAmount(Amount oriAmount, Amount addedAmount) {
+<span class="fc" id="L52">    int totalOriCents = oriAmount.dollarAmount * DOLLAR_TO_CENT + oriAmount.centsAmount;</span>
+<span class="fc" id="L53">    int totalAddedCents = addedAmount.dollarAmount * DOLLAR_TO_CENT + addedAmount.centsAmount;</span>
+
+<span class="fc" id="L55">    int totalDollar = (totalOriCents + totalAddedCents) / DOLLAR_TO_CENT;</span>
+<span class="fc" id="L56">    int totalCents = (totalOriCents + totalAddedCents) % DOLLAR_TO_CENT;</span>
+<span class="fc" id="L57">    return new Amount(totalDollar, totalCents);</span>
+  }
+
+  /**
+   * Method minusAmount Return the amount object after withdrawing another amount object.
+   *
+   * @param oriAmount     - the original amount object
+   * @param deletedAmount - the deleted amount object
+   * @return the amount object after withdrawing another amount object to original amount.
+   */
+  public Amount minusAmount(Amount oriAmount, Amount deletedAmount) {
+<span class="fc" id="L68">    int totalOriCents = oriAmount.dollarAmount * DOLLAR_TO_CENT + oriAmount.centsAmount;</span>
+<span class="fc" id="L69">    int totalDeletedCents = deletedAmount.dollarAmount * DOLLAR_TO_CENT + deletedAmount.centsAmount;</span>
+
+<span class="fc" id="L71">    int totalDollar = (totalOriCents - totalDeletedCents) / DOLLAR_TO_CENT;</span>
+<span class="fc" id="L72">    int totalCents = (totalOriCents - totalDeletedCents) % DOLLAR_TO_CENT;</span>
+<span class="fc" id="L73">    return new Amount(totalDollar, totalCents);</span>
+  }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

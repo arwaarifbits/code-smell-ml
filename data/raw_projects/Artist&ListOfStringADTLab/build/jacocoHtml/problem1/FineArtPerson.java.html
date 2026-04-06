@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FineArtPerson.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab05</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">FineArtPerson.java</span></div><h1>FineArtPerson.java</h1><pre class="source lang-java linenums">package problem1;
+
+import java.util.Arrays;
+
+/**
+ * This is FineArtPerson class and subclass of AbstractArtist. Represent any of Painters and
+ * Photographers with one more field, exhibits
+ */
+public class FineArtPerson extends AbstractArtist {
+  private String[] exhibits;
+
+  /**
+   * Constructor for FineArtPerson, Represent any of Painters and Photographers with one more
+   * specific field, exhibit
+   *
+   * @param name       - ActingPerson's Name, Name class
+   * @param age        - ActingPerson's Age, Integer
+   * @param genres     - representing an ActingPerson’s genres, string array
+   * @param award      - representing all awards that an ActingPerson received, string array
+   * @param exhibits   - all exhibits where their art was shown, string array
+   * @throws InvalidAgeException when age out of field
+   */
+  public FineArtPerson(Name name, Integer age, String[] genres, String[] award, String[] exhibits)
+      throws InvalidAgeException {
+<span class="fc" id="L25">    super(name, age, genres, award);</span>
+<span class="fc" id="L26">    this.exhibits = exhibits;</span>
+<span class="fc" id="L27">  }</span>
+
+  /**
+   * add the award to their current array of awards,
+   * @param award - the award that will be added
+   * @return A copy FineArtPerson object with updated array of awards.
+   */
+  @Override
+  public FineArtPerson receiveAward(String award) throws InvalidAgeException {
+<span class="fc" id="L36">    int originalAwardLength = this.getAward().length;</span>
+<span class="fc" id="L37">    String[] newAwardList = new String[originalAwardLength + 1];</span>
+<span class="fc" id="L38">    System.arraycopy(this.getAward(), 0, newAwardList,0, originalAwardLength);</span>
+<span class="fc" id="L39">    newAwardList[newAwardList.length-1] = award;</span>
+<span class="fc" id="L40">    return new FineArtPerson(this.getName(),this.getAge(),this.getGenres(),newAwardList,this.exhibits);</span>
+  }
+
+  /**
+   * Return the exhibits, String array
+   * @return the exhibits
+   */
+  public String[] getExhibits() {
+<span class="fc" id="L48">    return this.exhibits;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="nc bnc" id="L56" title="All 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L57">      return true;</span>
+    }
+<span class="nc bnc" id="L59" title="All 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L60">      return false;</span>
+    }
+<span class="nc bnc" id="L62" title="All 2 branches missed.">    if (!super.equals(o)) {</span>
+<span class="nc" id="L63">      return false;</span>
+    }
+<span class="nc" id="L65">    FineArtPerson that = (FineArtPerson) o;</span>
+<span class="nc" id="L66">    return Arrays.equals(exhibits, that.exhibits);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="nc" id="L74">    int result = super.hashCode();</span>
+<span class="nc" id="L75">    result = 31 * result + Arrays.hashCode(exhibits);</span>
+<span class="nc" id="L76">    return result;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="nc" id="L84">    return &quot;FineArtPerson{&quot; +</span>
+<span class="nc" id="L85">        &quot;exhibits=&quot; + Arrays.toString(exhibits) +</span>
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

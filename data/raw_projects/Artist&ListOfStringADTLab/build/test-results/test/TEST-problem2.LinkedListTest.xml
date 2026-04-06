@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem2.LinkedListTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-02-23T22:39:04" hostname="MacBook-Air.local" time="0.012">
+  <properties/>
+  <testcase name="hasDuplicates()" classname="problem2.LinkedListTest" time="0.001"/>
+  <testcase name="contains()" classname="problem2.LinkedListTest" time="0.001"/>
+  <testcase name="removeDuplicates()" classname="problem2.LinkedListTest" time="0.001"/>
+  <testcase name="getHead()" classname="problem2.LinkedListTest" time="0.0"/>
+  <testcase name="add()" classname="problem2.LinkedListTest" time="0.001"/>
+  <testcase name="size()" classname="problem2.LinkedListTest" time="0.001"/>
+  <testcase name="containsAll()" classname="problem2.LinkedListTest" time="0.001"/>
+  <testcase name="filterLargerThan()" classname="problem2.LinkedListTest" time="0.001"/>
+  <testcase name="isEmpty()" classname="problem2.LinkedListTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

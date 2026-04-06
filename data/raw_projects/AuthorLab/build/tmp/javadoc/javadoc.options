@@ -1,0 +1,7 @@
+-classpath '/Users/yiming/Desktop/CS5004/build/classes/java/main:/Users/yiming/Desktop/CS5004/build/resources/main'
+-d '/Users/yiming/Desktop/CS5004/build/docs/javadoc'
+-doctitle 'Lab1 1.0 API'
+-notimestamp 
+-quiet 
+-windowtitle 'Lab1 1.0 API'
+'/Users/yiming/Desktop/CS5004/src/main/java/Author.java'

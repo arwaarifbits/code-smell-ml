@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Recipient.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment2</a> &gt; <a href="index.source.html" class="el_package">assignment2.problem2</a> &gt; <span class="el_source">Recipient.java</span></div><h1>Recipient.java</h1><pre class="source lang-java linenums">package assignment2.problem2;
+
+import java.util.Objects;
+
+/**
+ * This is a recipient class which represent a recipient object with first name, last name and an
+ * email address.
+ */
+public class Recipient {
+
+  private String firstName;
+  private String lastName;
+  private String emailAddress;
+
+  /**
+   * Constructor for recipient object with specific first name, last name and email address
+   *
+   * @param firstName    - recipient's first name, string
+   * @param lastName     - recipient's last name, string
+   * @param emailAddress - recipient's email address, string
+   */
+<span class="fc" id="L22">  public Recipient(String firstName, String lastName, String emailAddress) {</span>
+<span class="fc" id="L23">    this.firstName = firstName;</span>
+<span class="fc" id="L24">    this.lastName = lastName;</span>
+<span class="fc" id="L25">    this.emailAddress = emailAddress;</span>
+<span class="fc" id="L26">  }</span>
+
+  /**
+   * Returns the first name of the recipient
+   *
+   * @return the first name of the recipient, string.
+   */
+  public String getFirstName() {
+<span class="fc" id="L34">    return this.firstName;</span>
+  }
+
+  /**
+   * Returns last name of the recipient
+   *
+   * @return last name of the recipient, string
+   */
+  public String getLastName() {
+<span class="fc" id="L43">    return this.lastName;</span>
+  }
+
+  /**
+   * Returns the email address of the recipient
+   *
+   * @return the email address of the recipient, string
+   */
+  public String getEmailAddress() {
+<span class="fc" id="L52">    return this.emailAddress;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L60" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L61">      return true;</span>
+    }
+<span class="pc bpc" id="L63" title="1 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L64">      return false;</span>
+    }
+<span class="fc" id="L66">    Recipient recipient = (Recipient) o;</span>
+<span class="pc bpc" id="L67" title="1 of 4 branches missed.">    return firstName.equals(recipient.firstName) &amp;&amp; lastName.equals(recipient.lastName)</span>
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">        &amp;&amp; emailAddress.equals(recipient.emailAddress);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L76">    return Objects.hash(firstName, lastName, emailAddress);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L84">    return &quot;Recipient{&quot; +</span>
+        &quot;firstName='&quot; + firstName + '\'' +
+        &quot;, lastName='&quot; + lastName + '\'' +
+        &quot;, emailAddress='&quot; + emailAddress + '\'' +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

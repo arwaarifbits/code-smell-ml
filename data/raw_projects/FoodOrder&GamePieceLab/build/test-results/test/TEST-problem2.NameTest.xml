@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem2.NameTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-02-17T22:48:50" hostname="MacBook-Air.local" time="0.01">
+  <properties/>
+  <testcase name="testToString()" classname="problem2.NameTest" time="0.002"/>
+  <testcase name="getFirstName()" classname="problem2.NameTest" time="0.002"/>
+  <testcase name="getLastName()" classname="problem2.NameTest" time="0.001"/>
+  <testcase name="testHashCode()" classname="problem2.NameTest" time="0.001"/>
+  <testcase name="testEquals()" classname="problem2.NameTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

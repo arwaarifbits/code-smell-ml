@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AbstractService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment3</a> &gt; <a href="index.source.html" class="el_package">problem1</a> &gt; <span class="el_source">AbstractService.java</span></div><h1>AbstractService.java</h1><pre class="source lang-java linenums">package problem1;
+
+import java.util.Objects;
+
+/**
+ * This is an abstract class for Service with propertyAddress, propertySize, carriedOutMonthly and
+ * numberOfServices
+ */
+public abstract class AbstractService implements ServicePriceCalculation {
+
+  private String propertyAddress;
+  private PropertySize propertySize;
+  private boolean carriedOutMonthly;
+  private int numberOfServices;
+<span class="fc" id="L15">  private static final Integer NINE_PAST_SERVICE = 9;</span>
+<span class="fc" id="L16">  private static final Double TENTH_SERVICE_DISCOUNT = 0.5;</span>
+<span class="fc" id="L17">  private static final Double MONTHLY_DISCOUNT = 0.1;</span>
+
+  /**
+   * Constructor for AbstractService with propertyAddress, propertySize, carriedOutMonthly and
+   * numberOfServices
+   *
+   * @param propertyAddress   - the property address, represented as a String
+   * @param propertySize      - the property size, represented as an enum
+   * @param carriedOutMonthly - whether the service is carried out monthly, represented as boolean
+   * @param numberOfServices  - The number of services previously carried out at the address,
+   *                          represented as an Integer
+   */
+  public AbstractService(String propertyAddress, PropertySize propertySize,
+      boolean carriedOutMonthly,
+<span class="fc" id="L31">      int numberOfServices) {</span>
+<span class="fc" id="L32">    this.propertyAddress = propertyAddress;</span>
+<span class="fc" id="L33">    this.propertySize = propertySize;</span>
+<span class="fc" id="L34">    this.carriedOutMonthly = carriedOutMonthly;</span>
+<span class="fc" id="L35">    this.numberOfServices = numberOfServices;</span>
+<span class="fc" id="L36">  }</span>
+
+  /**
+   * Return the property address
+   *
+   * @return the propertyAddress, String
+   */
+  public String getPropertyAddress() {
+<span class="fc" id="L44">    return this.propertyAddress;</span>
+  }
+
+  /**
+   * Return the property size
+   *
+   * @return the propertySize, enum
+   */
+  public PropertySize getPropertySize() {
+<span class="fc" id="L53">    return this.propertySize;</span>
+  }
+
+  /**
+   * Return whether the service is carried out monthly
+   *
+   * @return carriedOutMonthly, boolean
+   */
+  public boolean isCarriedOutMonthly() {
+<span class="fc" id="L62">    return this.carriedOutMonthly;</span>
+  }
+
+  /**
+   * Return the number of services previously carried out
+   *
+   * @return the numberOfServices, integer
+   */
+  public int getNumberOfServices() {
+<span class="fc" id="L71">    return this.numberOfServices;</span>
+  }
+
+  /**
+   * Calculate the final price which equals to base plus extra minus discount
+   *
+   * @return the two decimal rounded final price, double
+   */
+  @Override
+  public double calculatePrice() {
+<span class="fc" id="L81">    return Math.round(</span>
+<span class="fc" id="L82">        (this.calculateBaseFee() + this.calculateAdditionalFee() - this.calculateDiscountFee())</span>
+            * 100.0) / 100.0;
+  }
+
+  /**
+   * Calculate the DiscountFee. 50% discount for every 10th service. 10% discount for monthly
+   * services. If the service is eligible for both discounts apply the 10th service discount and not
+   * the monthly discount.
+   *
+   * @return the two decimal rounded discount fee, double
+   */
+  @Override
+  public double calculateDiscountFee() {
+<span class="fc bfc" id="L95" title="All 2 branches covered.">    if (this.getNumberOfServices() % 10 == NINE_PAST_SERVICE) {</span>
+<span class="fc" id="L96">      return Math.round(</span>
+<span class="fc" id="L97">          ((this.calculateBaseFee() + this.calculateAdditionalFee()) * TENTH_SERVICE_DISCOUNT)</span>
+              * 100.0) / 100.0;
+<span class="fc bfc" id="L99" title="All 2 branches covered.">    } else if (this.isCarriedOutMonthly()) {</span>
+<span class="fc" id="L100">      return Math.round(</span>
+<span class="fc" id="L101">          ((this.calculateBaseFee() + this.calculateAdditionalFee()) * MONTHLY_DISCOUNT) * 100.0)</span>
+          / 100.0;
+    }
+<span class="fc" id="L104">    return 0;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L112" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L113">      return true;</span>
+    }
+<span class="pc bpc" id="L115" title="1 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L116">      return false;</span>
+    }
+<span class="fc" id="L118">    AbstractService that = (AbstractService) o;</span>
+<span class="fc bfc" id="L119" title="All 4 branches covered.">    return carriedOutMonthly == that.carriedOutMonthly &amp;&amp; numberOfServices == that.numberOfServices</span>
+<span class="pc bpc" id="L120" title="2 of 4 branches missed.">        &amp;&amp; propertyAddress.equals(that.propertyAddress) &amp;&amp; propertySize == that.propertySize;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L128">    return Objects.hash(propertyAddress, propertySize, carriedOutMonthly, numberOfServices);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L136">    return &quot;propertyAddress='&quot; + propertyAddress + '\'' +</span>
+        &quot;, propertySize=&quot; + propertySize +
+        &quot;, carriedOutMonthly=&quot; + carriedOutMonthly +
+        &quot;, numberOfServices=&quot; + numberOfServices;
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

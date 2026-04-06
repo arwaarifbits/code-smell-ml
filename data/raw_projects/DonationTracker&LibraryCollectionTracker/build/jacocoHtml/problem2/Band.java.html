@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Band.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Assignment5</a> &gt; <a href="index.source.html" class="el_package">problem2</a> &gt; <span class="el_source">Band.java</span></div><h1>Band.java</h1><pre class="source lang-java linenums">package problem2;
+
+import java.util.ArrayList;
+import java.util.Objects;
+
+/**
+ * This is a Band class which is the subclass of the Group with additional field band name and
+ * members it has. Represent the Band.
+ */
+public class Band extends Group {
+
+  private ArrayList&lt;RecordingArtist&gt; members;
+  private String name;
+
+  /**
+   * Constructor for the Band with name and members
+   *
+   * @param name    - band's name, string
+   * @param members - members collection, RecordingArtist ArrayList
+   */
+<span class="fc" id="L21">  public Band(String name, ArrayList&lt;RecordingArtist&gt; members) {</span>
+<span class="fc" id="L22">    this.name = name;</span>
+<span class="fc" id="L23">    this.members = members;</span>
+<span class="fc" id="L24">  }</span>
+
+  /**
+   * Add a member into the band
+   *
+   * @param artist - the member added to the band, RecordingArtist
+   */
+  public void addMember(RecordingArtist artist) {
+<span class="fc" id="L32">    this.members.add(artist);</span>
+<span class="fc" id="L33">  }</span>
+
+  /**
+   * Remove a member in the band
+   *
+   * @param artist - the member removed from the band, RecordingArtist
+   */
+  public void removeMember(RecordingArtist artist) {
+<span class="fc" id="L41">    this.members.remove(artist);</span>
+<span class="fc" id="L42">  }</span>
+
+  /**
+   * Get the name of the band
+   *
+   * @return the name of the band, string
+   */
+  public String getName() {
+<span class="fc" id="L50">    return this.name;</span>
+  }
+
+  /**
+   * Get the collections of the members in the band
+   *
+   * @return the members of the band, RecordingArtist ArrayList
+   */
+  public ArrayList&lt;RecordingArtist&gt; getMembers() {
+<span class="fc" id="L59">    return this.members;</span>
+  }
+
+  /**
+   * Check whether the Band contains the given creator
+   *
+   * @param creator - the creator wanted to check, Creator
+   * @return true if Band contains the given creator otherwise false, boolean
+   */
+  @Override
+  public boolean containsCreator(Creator creator) {
+<span class="fc bfc" id="L70" title="All 2 branches covered.">    for (RecordingArtist member : this.members) {</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">      if (member.equals(creator)) {</span>
+<span class="fc" id="L72">        return true;</span>
+      }
+<span class="fc" id="L74">    }</span>
+<span class="fc" id="L75">    return false;</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L83" title="All 2 branches covered.">    if (this == o) {</span>
+<span class="fc" id="L84">      return true;</span>
+    }
+<span class="fc bfc" id="L86" title="All 4 branches covered.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="fc" id="L87">      return false;</span>
+    }
+<span class="fc" id="L89">    Band band = (Band) o;</span>
+<span class="pc bpc" id="L90" title="1 of 4 branches missed.">    return name.equals(band.name) &amp;&amp; members.equals(band.members);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public int hashCode() {
+<span class="fc" id="L98">    return Objects.hash(name, members);</span>
+  }
+
+  /**
+   * {@inheritDoc}
+   */
+  @Override
+  public String toString() {
+<span class="fc" id="L106">    return &quot;Band{&quot; +</span>
+        &quot;name='&quot; + name + '\'' +
+        &quot;, members=&quot; + members +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

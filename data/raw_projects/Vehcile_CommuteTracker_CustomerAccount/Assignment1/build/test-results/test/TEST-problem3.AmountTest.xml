@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="problem3.AmountTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-02-05T04:16:53" hostname="MacBook-Air.local" time="0.01">
+  <properties/>
+  <testcase name="getCentsAmount()" classname="problem3.AmountTest" time="0.001"/>
+  <testcase name="addAmount()" classname="problem3.AmountTest" time="0.002"/>
+  <testcase name="getDollarAmount()" classname="problem3.AmountTest" time="0.001"/>
+  <testcase name="minusAmount()" classname="problem3.AmountTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
